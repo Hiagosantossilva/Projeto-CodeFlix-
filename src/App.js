@@ -19,9 +19,9 @@ export default () => {
       setMovieList(list);
 
       // Pegando o Feartured
-      let originals = list.filter(i=>i.slug === 'originals');
-      let randomChose = Math.floor(Math.random() * (originals[0].items.results.length -1))
-      let chosen = originals[0].items.results[randomChose];
+      let principais = list.filter(i=>i.slug === 'principais');
+      let randomChose = Math.floor(Math.random() * (principais[0].items.results.length -1))
+      let chosen = principais[0].items.results[randomChose];
 
       let chosenInfo = await Tmdb.getMovieInfo(chosen.id, 'tv');
       setFeaturedData(chosenInfo);

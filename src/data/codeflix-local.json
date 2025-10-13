@@ -1,0 +1,26 @@
+{
+  "principais": [
+    {
+      "id": 1,
+      "title": "Faculdade Impacta",
+      "overview": "Aplicativo de produtividade criado com JavaScript puro.",
+      "release_date": "2025-01-15",
+      "vote_average": 9.0,
+      "poster_path": "https://www.impacta.edu.br/themes/wc_agenciar3/images/impactando-vidas/2024/impactando-vidas-sobre-impacta.png",
+      "backdrop_path": "https://www.impacta.edu.br/themes/wc_agenciar3/images/graduacao/produto/2023/galeria/novo-campus-impacta6.jpg",
+      "genres": ["Front-end", "Produtividade"]
+    }
+  ],
+  "python": [
+    {
+      "id": 2,
+      "title": "Chatbot Impacta",
+      "overview": "Assistente conversacional desenvolvido com Python e Flask.",
+      "release_date": "2024-08-20",
+      "vote_average": 8.7,
+      "poster_path": "/assets/poster/chatbot.jpg",
+      "backdrop_path": "/assets/backdrop/chatbot-bg.jpg",
+      "genres": ["IA", "Automação"]
+    }
+  ]
+}

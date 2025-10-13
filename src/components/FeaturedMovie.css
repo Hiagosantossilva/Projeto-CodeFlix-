@@ -1,5 +1,9 @@
+body {
+  overflow-x: hidden;
+}
 .featured{
     height: 100vh;
+    overflow: hidden;
 
 }
 

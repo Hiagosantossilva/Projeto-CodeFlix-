@@ -1,41 +1,67 @@
 import React from 'react';
 import './FeaturedMovie.css';
 
-export default ({item}) => {
-    let firstDate = new Date(item.first_air_date);
-    let genres = [];
-    for(let i in item.genres){
-        genres.push(item.genres[i].name)
-    }
+export default function FeaturedMovie({ item = {} }) {
+  const title =
+    item.original_name || item.name || item.original_title || item.title || 'Sem título';
 
-    let description = item.overview || "";
-    if(description.length > 200){
-        description = description.substring(0, 200)+'...';
-    }
+  const dateStr = item.first_air_date || item.release_date || '';
+  const firstDate = dateStr ? new Date(dateStr) : null;
+  const year = firstDate ? firstDate.getFullYear() : '—';
 
-    return (
-        <section className="featured" style={{
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundImage: `url(https://image.tmdb.org/t/p/original${item.backdrop_path})`
+  const genresList = Array.isArray(item.genres)
+    ? item.genres.map(g => (typeof g === 'string' ? g : g?.name)).filter(Boolean)
+    : [];
+  const genres = genresList.join(', ');
 
-        }}>
-            <div className="featured--vertical"> 
-                <div className="featured--horizontal">
-                    <div className="featured--name">{item.original_name}</div>
-                    <div className="featured--info">
-                        <div className="featured--points">{item.vote_average} pontos </div>
-                        <div className="featured--year">{firstDate.getFullYear()}</div>
-                        <div className="featured--seasons">{item.number_of_seasons} temporada{item.number_of_seasons !== 1 ? 's' : ''}</div>
-                    </div>
-                    <div className="featured--description">{description} </div>
-                    <div className="featured--buttons">
-                        <a href={`/watch/${item.id}`} className="featured--watchbutton">▶ Assistir</a>
-                        <a href={`/list/add${item.id}`}className="featured--mylistbutton">✚ Minha Lista</a>
-                    </div>
-                    <div className="featured--genres"><strong>Gêneros: </strong>{genres.join(', ')}</div>
-                </div>
-            </div>
-        </section>
-    ); 
+  let description = item.overview || '';
+  if (description.length > 200) description = description.substring(0, 200) + '...';
+
+  const points = typeof item.vote_average === 'number' ? item.vote_average : '—';
+  const seasons = typeof item.number_of_seasons === 'number' ? item.number_of_seasons : null;
+
+  const resolveBackdrop = (backdrop_path) => {
+    if (!backdrop_path) return undefined;
+    if (backdrop_path.startsWith('http') || backdrop_path.startsWith('/')) return backdrop_path;
+    return `https://image.tmdb.org/t/p/original${backdrop_path}`;
+  };
+  const backdropUrl = resolveBackdrop(item.backdrop_path);
+
+  return (
+    <section
+      className="featured"
+      style={{
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        ...(backdropUrl ? { backgroundImage: `url(${backdropUrl})` } : {})
+      }}
+    >
+      <div className="featured--vertical">
+        <div className="featured--horizontal">
+          <div className="featured--name">{title}</div>
+
+          <div className="featured--info">
+            <div className="featured--points">{points} pontos</div>
+            <div className="featured--year">{year}</div>
+            {seasons != null && (
+              <div className="featured--seasons">
+                {seasons} temporada{seasons !== 1 ? 's' : ''}
+              </div>
+            )}
+          </div>
+
+          <div className="featured--description">{description}</div>
+
+          <div className="featured--buttons">
+            <a href={`/watch/${item.id}`} className="featured--watchbutton">▶ Assistir</a>
+            <a href={`/list/add/${item.id}`} className="featured--mylistbutton">✚ Minha Lista</a>
+          </div>
+
+          {genres && (
+            <div className="featured--genres"><strong>Gêneros: </strong>{genres}</div>
+          )}
+        </div>
+      </div>
+    </section>
+  );
 }
