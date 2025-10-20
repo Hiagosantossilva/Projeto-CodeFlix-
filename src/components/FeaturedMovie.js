@@ -21,10 +21,18 @@ export default function FeaturedMovie({ item = {} }) {
   const seasons = typeof item.number_of_seasons === 'number' ? item.number_of_seasons : null;
 
   const resolveBackdrop = (backdrop_path) => {
-    if (!backdrop_path) return undefined;
-    if (backdrop_path.startsWith('http') || backdrop_path.startsWith('/')) return backdrop_path;
-    return `https://image.tmdb.org/t/p/original${backdrop_path}`;
-  };
+  if (!backdrop_path) return undefined;
+
+  // Se for imagem local do public/
+  if (backdrop_path.startsWith('/')) return process.env.PUBLIC_URL + backdrop_path;
+
+  // Caminho relativo (sem http)
+  if (!backdrop_path.startsWith('http')) return process.env.PUBLIC_URL + '/' + backdrop_path;
+
+  // URL externa completa
+  return backdrop_path;
+};
+
   const backdropUrl = resolveBackdrop(item.backdrop_path);
 
   return (
@@ -53,8 +61,8 @@ export default function FeaturedMovie({ item = {} }) {
           <div className="featured--description">{description}</div>
 
           <div className="featured--buttons">
-            <a href={`/watch/${item.id}`} className="featured--watchbutton">▶ Assistir</a>
-            <a href={`/list/add/${item.id}`} className="featured--mylistbutton">✚ Minha Lista</a>
+            <a href={`${item.link}`} target="_blank" className="featured--watchbutton"> ▶ Abrir Projeto </a>
+            <a href={`/list/add/${item.id}`} className="featured--mylistbutton">✚ Mais detalhes </a>
           </div>
 
           {genres && (

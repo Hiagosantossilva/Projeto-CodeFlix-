@@ -21,6 +21,7 @@ export default {
   async getHomeList() {
     return [
       { slug: 'principais', title: 'Principais', items: pageify(local.principais || []) },
+      { slug: 'javascript',     title: 'JavaScript',     items: pageify(local.javascript || []) },
       { slug: 'python',     title: 'Python',     items: pageify(local.python || []) }
     ];
   },

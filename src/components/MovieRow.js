@@ -52,11 +52,20 @@ export default function MovieRow({ title, items }) {
         >
           {results.map((item) => (
             <div className="movieRow--item" key={item.id}>
+            <a
+              href={item.link || '#'}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="movieRow--link"
+              title={`Abrir ${item.title || item.name}`}
+            >
               <img
                 src={resolvePoster(item.poster_path, item.backdrop_path)}
                 alt={item.title || item.name || 'Poster'}
                 loading="lazy"
               />
+            <div className="titulo">{item.title}</div>
+            </a>
             </div>
           ))}
         </div>

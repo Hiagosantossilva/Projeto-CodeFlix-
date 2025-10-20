@@ -58,9 +58,8 @@ export default () => {
 
       </section>
       <footer>
-        Feito com <span role="img" arial-label="coração">❤️ por Hiago Santos Silva</span><br/>
-        Direitos de imagem para Netflix<br/>
-        Dados pegos do site Themoviedb.org
+        Feito por Hiago Santos Silva
+  
       </footer>
       {movieList.length <= 0 && 
        <div className="loading">

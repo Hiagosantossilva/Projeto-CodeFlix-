@@ -2,25 +2,49 @@
   "principais": [
     {
       "id": 1,
-      "title": "Faculdade Impacta",
-      "overview": "Aplicativo de produtividade criado com JavaScript puro.",
+      "title": "ChatBot Impacta",
+      "overview": "ChatBot simples consumindo uma API de LLM.",
       "release_date": "2025-01-15",
-      "vote_average": 9.0,
-      "poster_path": "https://www.impacta.edu.br/themes/wc_agenciar3/images/impactando-vidas/2024/impactando-vidas-sobre-impacta.png",
-      "backdrop_path": "https://www.impacta.edu.br/themes/wc_agenciar3/images/graduacao/produto/2023/galeria/novo-campus-impacta6.jpg",
-      "genres": ["Front-end", "Produtividade"]
+      "vote_average": 5.0,
+      "link": "https://chatbot-faculdade-impacta-hpxy.vercel.app/",
+      "poster_path": "/midia/ChatBotCapa.png",
+      "backdrop_path": "/midia/ChatBotBanner.png",
+      "genres": ["Front-end", "IA"]
+    },
+     {
+      "id": 2,
+      "title": "Planner de Tarefas",
+      "overview": "Assistente de planejamento de tarefas feito com JavaScript",
+      "release_date": "2024-01-15",
+      "vote_average": 5.0,
+      "link": "https://projeto-planner-rho.vercel.app/",
+      "poster_path": "/midia/PlannerCapa.png",
+      "backdrop_path": "/midia/PlannerBanner.png",
+      "genres": ["Front-end", "Javascript"]
+    },
+    {
+      "id": 3,
+      "title": "Site TimeShift",
+      "overview": "anding Page básica e responsiva feita em JavaScript",
+      "release_date": "2024-08-20",
+      "vote_average": 4.0,
+      "link": "https://timeshift-catalogo.vercel.app/",
+      "poster_path": "/midia/TimeshiftCapa.png",
+      "backdrop_path": "/midia/TimeshiftBanner.png",
+      "genres": ["Front-end", "IA"]
     }
   ],
-  "python": [
-    {
-      "id": 2,
-      "title": "Chatbot Impacta",
-      "overview": "Assistente conversacional desenvolvido com Python e Flask.",
+  "javascript": [
+     {
+      "id": 3,
+      "title": "Site TimeShift",
+      "overview": "anding Page básica e responsiva feita em JavaScript",
       "release_date": "2024-08-20",
-      "vote_average": 8.7,
-      "poster_path": "/assets/poster/chatbot.jpg",
-      "backdrop_path": "/assets/backdrop/chatbot-bg.jpg",
-      "genres": ["IA", "Automação"]
+      "vote_average": 4.0,
+      "link": "https://timeshift-catalogo.vercel.app/",
+      "poster_path": "/midia/TimeshiftCapa.png",
+      "backdrop_path": "/midia/TimeshiftBanner.png",
+      "genres": ["Front-end", "IA"]
     }
   ]
 }

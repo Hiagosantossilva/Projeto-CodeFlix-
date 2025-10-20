@@ -12,18 +12,26 @@
     padding-left: 30px;
 
 }
-
+.movieRow .movieRow--item a.movieRow--link,
+.movieRow .movieRow--item a.movieRow--link:link,
+.movieRow .movieRow--item a.movieRow--link:visited {
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 200;
+}
 .movieRow--list {
     transition: all ease 0.5s;
 }
 .movieRow--item{
     display: inline-block;  
     width: 150px;
-    height: 235px; /* linha  que adicionei */
+    height: 235px; 
 }
 .movieRow--item img {
     width: 100%;
-    height: 100%; /* linha  que adicionei */
+    height: 100%; 
     transform: scale(0.9)
 }
 
