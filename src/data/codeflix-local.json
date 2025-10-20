@@ -19,8 +19,8 @@
       "release_date": "2025-01-15",
       "vote_average": 5.0,
       "link": "https://chatbot-faculdade-impacta-hpxy.vercel.app/",
-      "poster_path": "/midia/chatbotcapa.png",
-      "backdrop_path": "/midia/chatbotbanner.png",
+      "poster_path": "/midia/ChatBotCapa.png",
+      "backdrop_path": "/midia/ChatBotBanner.png",
       "genres": ["Front-end", "IA"]
     },
     {
