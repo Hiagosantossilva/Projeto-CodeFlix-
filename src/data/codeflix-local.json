@@ -1,18 +1,8 @@
 {
   "principais": [
-    {
-      "id": 1,
-      "title": "ChatBot Impacta",
-      "overview": "ChatBot simples consumindo uma API de LLM.",
-      "release_date": "2025-01-15",
-      "vote_average": 5.0,
-      "link": "https://chatbot-faculdade-impacta-hpxy.vercel.app/",
-      "poster_path": "/midia/ChatBotCapaJPG.jpg",
-      "backdrop_path": "/midia/ChatBotBanner.png",
-      "genres": ["Front-end", "IA"]
-    },
+   
      {
-      "id": 2,
+      "id": 1,
       "title": "Planner de Tarefas",
       "overview": "Assistente de planejamento de tarefas feito com JavaScript",
       "release_date": "2024-01-15",
@@ -21,6 +11,17 @@
       "poster_path": "/midia/PlannerCapa.png",
       "backdrop_path": "/midia/PlannerBanner.png",
       "genres": ["Front-end", "Javascript"]
+    },
+     {
+      "id": 2,
+      "title": "ChatBot Impacta",
+      "overview": "ChatBot simples consumindo uma API de LLM.",
+      "release_date": "2025-01-15",
+      "vote_average": 5.0,
+      "link": "https://chatbot-faculdade-impacta-hpxy.vercel.app/",
+      "poster_path": "/midia/ChatBotCapaJPG.jpg",
+      "backdrop_path": "/midia/ChatBotBanner.png",
+      "genres": ["Front-end", "IA"]
     },
     {
       "id": 3,
