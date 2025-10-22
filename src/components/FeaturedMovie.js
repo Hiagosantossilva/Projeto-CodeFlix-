@@ -40,7 +40,7 @@ export default function FeaturedMovie({ item = {}, onOpenModal }) {
       className="featured"
       style={{
         backgroundSize: 'cover',
-        backgroundPosition: 'left',
+        backgroundPosition: 'center',
         ...(backdropUrl ? { backgroundImage: `url(${backdropUrl})` } : {})
       }}
     >
