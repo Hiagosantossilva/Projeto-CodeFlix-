@@ -65,7 +65,6 @@ body {
 
 .featured--buttons {
     margin-top: 15px;
-
 }
 .featured--watchbutton, .featured--mylistbutton{
     display: inline-block;
@@ -77,6 +76,9 @@ body {
     margin-right: 10px;
     opacity: 1;
     transition: all ease 0.2;
+}
+.featured--mylistbutton:hover{
+    cursor: pointer;
 }
 .featured--watchbutton{
     background-color: white;
@@ -119,7 +121,8 @@ body {
     }
     .featured--description{
     font-size: 14px;
-    max-width: 100%;
+    max-width: 60%;
+    text-shadow: horizontal-offset vertical-offset blur-radius color;
 }
     .featured--watchbutton,
     .featured--mylistbutton{

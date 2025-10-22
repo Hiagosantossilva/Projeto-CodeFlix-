@@ -12,8 +12,19 @@
       "backdrop_path": "/midia/PlannerBanner.png",
       "genres": ["Front-end", "Javascript"]
     },
-     {
+    {
       "id": 2,
+      "title": "Clone da Netflix",
+      "overview": "Réplica da interface da Netflix feita em React.js para fins de aprendizado. Por meio deste projeto foi desenvolvido a sua variação que se tornou este portfólio atual",
+      "release_date": "2024-08-20",
+      "vote_average": 5.0,
+      "link": "https://netflix-beryl-beta.vercel.app/",
+      "poster_path": "/midia/NetflixCapa.png",
+      "backdrop_path": "/midia/NetflixBanner.png",
+      "genres": ["Front-end", "Javascript", "React"]
+    },
+     {
+      "id": 3,
       "title": "ChatBot Impacta",
       "overview": "ChatBot simples consumindo uma API de LLM.",
       "release_date": "2025-01-15",
@@ -24,28 +35,47 @@
       "genres": ["Front-end", "IA"]
     },
     {
-      "id": 3,
+      "id": 4,
       "title": "Site TimeShift",
-      "overview": "anding Page básica e responsiva feita em JavaScript",
+      "overview": "Landing Page básica feita em JavaScript",
       "release_date": "2024-08-20",
-      "vote_average": 4.0,
+      "vote_average": 3.0,
       "link": "https://timeshift-catalogo.vercel.app/",
       "poster_path": "/midia/TimeshiftCapa.png",
       "backdrop_path": "/midia/TimeshiftBanner.png",
       "genres": ["Front-end", "IA"]
-    }
-  ],
-  "javascript": [
-     {
-      "id": 3,
-      "title": "Site TimeShift",
-      "overview": "anding Page básica e responsiva feita em JavaScript",
+    },
+    {
+      "id": 5,
+      "title": "Robotron",
+      "overview": "Interface criada em Javascript para o projeto de formação Front-end da Alura",
       "release_date": "2024-08-20",
       "vote_average": 4.0,
-      "link": "https://timeshift-catalogo.vercel.app/",
-      "poster_path": "/midia/TimeshiftCapa.png",
-      "backdrop_path": "/midia/TimeshiftBanner.png",
-      "genres": ["Front-end", "IA"]
-    }
-  ]
+      "link": "https://alura-exercicios-js.vercel.app/?",
+      "poster_path": "/midia/RobotronCapa.png",
+      "backdrop_path": "/midia/RobotronBanner.png",
+      "genres": ["Front-end", "Javascript"]
+    },
+    {
+      "id": 6,
+      "title": "Sabor Local",
+      "overview": "Aplicativo de Delivery completo e funcional desenvolvido para o segundo semestre de Ciência da Computação da faculdade Impacta. Criado utilizando ferramentas Low-code como FlutterFlow, Xano e n8n para criar processos automatizados. Projeto desenvolvido em grupo em um ambiente de metodologias ágeis e cooperação.",
+      "release_date": "2025-08-20",
+      "vote_average": 3.0,
+      "link": "https://app.flutterflow.io/share/meme-bpyvdm",
+      "poster_path": "/midia/SaborLocalCapa.png",
+      "backdrop_path": "/midia/SaborLocalBanner.png",
+      "genres": ["Low-Code","FlutterFlow", "Xano", "n8n"]
+    },
+    {
+      "id": 7,
+      "title": "Rede Social",
+      "overview": "Uma página de rede social básica feita em JavaScript",
+      "release_date": "2024-08-20",
+      "vote_average": 3.0,
+      "link": "https://projeto-rede-social-chi.vercel.app/",
+      "poster_path": "/midia/RedeSocialCapa.png",
+      "backdrop_path": "/midia/RedeSocialBanner.png",
+      "genres": ["Front-end", "Javascript"]
+    }]
 }

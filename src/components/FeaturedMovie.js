@@ -1,7 +1,7 @@
 import React from 'react';
 import './FeaturedMovie.css';
 
-export default function FeaturedMovie({ item = {} }) {
+export default function FeaturedMovie({ item = {}, onOpenModal }) {
   const title =
     item.original_name || item.name || item.original_title || item.title || 'Sem título';
 
@@ -40,7 +40,7 @@ export default function FeaturedMovie({ item = {} }) {
       className="featured"
       style={{
         backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundPosition: 'left',
         ...(backdropUrl ? { backgroundImage: `url(${backdropUrl})` } : {})
       }}
     >
@@ -62,7 +62,7 @@ export default function FeaturedMovie({ item = {} }) {
 
           <div className="featured--buttons">
             <a href={`${item.link}`} target="_blank" className="featured--watchbutton"> ▶ Abrir Projeto </a>
-            <a href={`/list/add/${item.id}`} className="featured--mylistbutton">✚ Mais detalhes </a>
+            <a className="featured--mylistbutton" onClick={() => onOpenModal(item)}>✚ Mais detalhes </a>
           </div>
 
           {genres && (
