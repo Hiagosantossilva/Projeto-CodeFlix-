@@ -131,4 +131,8 @@ body {
     .featured--genres{
         font-size: 14px;
     }
+    .featured--horizontal{
+        background: linear-gradient(to right, #111 30%, transparent 100%);
+
+    }
 }
