@@ -13,6 +13,14 @@ export default function Modal({ item, onClose }) {
           className="modal-backdrop"
         />
         <div className="modal-content">
+
+          {/* ✅ Aviso opcional */}
+          {item.warning && (
+            <div className="modal-warning">
+              ⚠️ {item.warning}
+            </div>
+          )}
+
           <h2>{item.title}</h2>
           <p className="modal-description">{item.overview}</p>
 

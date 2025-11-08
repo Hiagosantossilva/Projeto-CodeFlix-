@@ -22,8 +22,9 @@ const Tmdb = {
   async getHomeList() {
     return [
       { slug: 'principais', title: 'Principais', items: pageify(local.principais || []) },
-      { slug: 'javascript', title: 'JavaScript', items: pageify(local.javascript || []) },
-      { slug: 'python', title: 'Python', items: pageify(local.python || []) }
+      { slug: 'Javascript', title: 'Javascript', items: pageify(local.Javascript || []) },
+      { slug: 'jogos', title: 'Jogos', items: pageify(local.jogos || []) }
+
     ];
   },
 

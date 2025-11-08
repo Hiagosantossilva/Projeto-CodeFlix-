@@ -10,7 +10,8 @@
       "link": "https://projeto-planner-rho.vercel.app/",
       "poster_path": "/midia/PlannerCapa.png",
       "backdrop_path": "/midia/PlannerBanner.png",
-      "genres": ["Front-end", "Javascript"]
+      "genres": ["Front-end", "Javascript"],
+      "warning": ""
     },
     {
       "id": 2,
@@ -21,7 +22,9 @@
       "link": "https://netflix-beryl-beta.vercel.app/",
       "poster_path": "/midia/NetflixCapa.png",
       "backdrop_path": "/midia/NetflixBanner.png",
-      "genres": ["Front-end", "Javascript", "React"]
+      "genres": ["Front-end", "Javascript", "React"],
+      "warning": ""
+
     },
      {
       "id": 3,
@@ -32,7 +35,9 @@
       "link": "https://chatbot-faculdade-impacta-hpxy.vercel.app/",
       "poster_path": "/midia/ChatbotCapaJPG.jpg",
       "backdrop_path": "/midia/ChatBotBanner.png",
-      "genres": ["Front-end", "IA"]
+      "genres": ["Front-end", "IA"],
+      "warning": ""
+
     },
     {
       "id": 4,
@@ -43,7 +48,9 @@
       "link": "https://timeshift-catalogo.vercel.app/",
       "poster_path": "/midia/TimeshiftCapa.png",
       "backdrop_path": "/midia/TimeshiftBanner.png",
-      "genres": ["Front-end", "IA"]
+      "genres": ["Front-end", "IA"],
+      "warning": "Este projeto foi desenvolvido para uso em computadores."
+
     },
     {
       "id": 5,
@@ -54,7 +61,9 @@
       "link": "https://alura-exercicios-js.vercel.app/?",
       "poster_path": "/midia/RobotronCapa.png",
       "backdrop_path": "/midia/RobotronBanner.png",
-      "genres": ["Front-end", "Javascript"]
+      "genres": ["Front-end", "Javascript"],
+      "warning": "Este projeto foi desenvolvido para uso em computadores."
+
     },
     {
       "id": 6,
@@ -65,7 +74,9 @@
       "link": "https://delivery-view-code.flutterflow.app",
       "poster_path": "/midia/SaborLocalCapa.png",
       "backdrop_path": "/midia/SaborLocalBanner.png",
-      "genres": ["Mobile","Low-Code","FlutterFlow", "Xano", "n8n"]
+      "genres": ["Mobile","Low-Code","FlutterFlow", "Xano", "n8n"],
+      "warning": "Este projeto foi desenvolvido para dispositivos móveis."
+
     },
     {
       "id": 7,
@@ -76,7 +87,9 @@
       "link": "https://projeto-rede-social-chi.vercel.app/",
       "poster_path": "/midia/RedeSocialCapa.png",
       "backdrop_path": "/midia/RedeSocialBanner.png",
-      "genres": ["Front-end", "Javascript"]
+      "genres": ["Front-end", "Javascript"],
+      "warning": ""
+
     },
   {
       "id": 8,
@@ -87,17 +100,165 @@
       "link": "https://jornal-tech-puim.vercel.app/",
       "poster_path": "/midia/JornalCapa.png",
       "backdrop_path": "/midia/JornalBanner.png",
-      "genres": ["Front-end", "Javascript"]
+      "genres": ["Front-end", "Javascript"],
+      "warning": ""
+
     },
-   {
+     {
       "id": 9,
       "title": "Escape From",
-      "overview": "Jogo em desenvolvimento utilizando o Construct (Apenas para Desktop)",
+      "overview": "Jogo em desenvolvimento utilizando o Construct",
       "release_date": "2023-08-20",
       "vote_average": 8.0,
       "link": "https://escape-from-game-al9u0izxu-hiagosantossilvas-projects.vercel.app/",
       "poster_path": "/midia/EscapaFromCapa.png",
-      "backdrop_path": "/midia/EscapaFromBanner.png",
-      "genres": ["Desktop","Construct"]
-    }]
+      "backdrop_path": "/midia/EscapeFromBanner.png",
+      "genres": ["Desktop","Construct"],
+      "warning": "Este projeto foi desenvolvido para uso em computadores."
+    },  
+    {
+      "id": 10,
+      "title": "Mario",
+      "overview": "Joguinho básico desenvolvido em HTML/CSS e JS",
+      "release_date": "2023-08-20",
+      "vote_average": 8.0,
+      "link": "https://mario-js-nxwx.vercel.app/",
+      "poster_path": "/midia/MarioCapa.png",
+      "backdrop_path": "/midia/MarioBanner.png",
+      "genres": ["Desktop","Javascript","HTML", "CSS"],
+      "warning": "Este projeto foi desenvolvido para uso em computadores."
+    }
+],
+   
+   "Javascript": [
+{
+      "id": 1,
+      "title": "Planner de Tarefas",
+      "overview": "Assistente de planejamento de tarefas feito com JavaScript",
+      "release_date": "2024-01-15",
+      "vote_average": 5.0,
+      "link": "https://projeto-planner-rho.vercel.app/",
+      "poster_path": "/midia/PlannerCapa.png",
+      "backdrop_path": "/midia/PlannerBanner.png",
+      "genres": ["Front-end", "Javascript"],
+      "warning": ""
+    },
+    {
+      "id": 2,
+      "title": "Clone da Netflix",
+      "overview": "Réplica da interface da Netflix feita em React.js para fins de aprendizado. Por meio deste projeto foi desenvolvido a sua variação que se tornou este portfólio atual",
+      "release_date": "2024-08-20",
+      "vote_average": 5.0,
+      "link": "https://netflix-beryl-beta.vercel.app/",
+      "poster_path": "/midia/NetflixCapa.png",
+      "backdrop_path": "/midia/NetflixBanner.png",
+      "genres": ["Front-end", "Javascript", "React"],
+      "warning": ""
+
+    },
+     {
+      "id": 3,
+      "title": "ChatBot Impacta",
+      "overview": "ChatBot simples consumindo uma API de LLM.",
+      "release_date": "2025-01-15",
+      "vote_average": 5.0,
+      "link": "https://chatbot-faculdade-impacta-hpxy.vercel.app/",
+      "poster_path": "/midia/ChatbotCapaJPG.jpg",
+      "backdrop_path": "/midia/ChatBotBanner.png",
+      "genres": ["Front-end", "IA"],
+      "warning": ""
+
+    },
+    {
+      "id": 4,
+      "title": "Site TimeShift",
+      "overview": "Landing Page básica feita em JavaScript",
+      "release_date": "2024-08-20",
+      "vote_average": 3.0,
+      "link": "https://timeshift-catalogo.vercel.app/",
+      "poster_path": "/midia/TimeshiftCapa.png",
+      "backdrop_path": "/midia/TimeshiftBanner.png",
+      "genres": ["Front-end", "IA"],
+      "warning": "Este projeto foi desenvolvido para uso em computadores."
+
+    },
+    {
+      "id": 5,
+      "title": "Robotron",
+      "overview": "Interface criada em Javascript para o projeto de formação Front-end da Alura",
+      "release_date": "2024-08-20",
+      "vote_average": 4.0,
+      "link": "https://alura-exercicios-js.vercel.app/?",
+      "poster_path": "/midia/RobotronCapa.png",
+      "backdrop_path": "/midia/RobotronBanner.png",
+      "genres": ["Front-end", "Javascript"],
+      "warning": "Este projeto foi desenvolvido para uso em computadores."
+
+    },
+    {
+      "id": 7,
+      "title": "Rede Social",
+      "overview": "Uma página de rede social básica feita em JavaScript",
+      "release_date": "2024-08-20",
+      "vote_average": 3.0,
+      "link": "https://projeto-rede-social-chi.vercel.app/",
+      "poster_path": "/midia/RedeSocialCapa.png",
+      "backdrop_path": "/midia/RedeSocialBanner.png",
+      "genres": ["Front-end", "Javascript"],
+      "warning": ""
+
+    },
+  {
+      "id": 8,
+      "title": "Jornal Tech",
+      "overview": "Um dos meus primeiros projetos utilizando JavaScript, interface com código arcaico e pouco responsiva, mas criativa e inventiva",
+      "release_date": "2022-08-20",
+      "vote_average": 2.0,
+      "link": "https://jornal-tech-puim.vercel.app/",
+      "poster_path": "/midia/JornalCapa.png",
+      "backdrop_path": "/midia/JornalBanner.png",
+      "genres": ["Front-end", "Javascript"],
+      "warning": ""
+
+    },
+    {
+      "id": 10,
+      "title": "Mario",
+      "overview": "Joguinho básico desenvolvido em HTML/CSS e JS",
+      "release_date": "2023-08-20",
+      "vote_average": 8.0,
+      "link": "https://mario-js-nxwx.vercel.app/",
+      "poster_path": "/midia/MarioCapa.png",
+      "backdrop_path": "/midia/MarioBanner.png",
+      "genres": ["Desktop","Javascript","HTML", "CSS"],
+      "warning": "Este projeto foi desenvolvido para uso em computadores."
+    }
+   ],
+    "jogos": [
+  {
+      "id": 9,
+      "title": "Escape From",
+      "overview": "Jogo em desenvolvimento utilizando o Construct",
+      "release_date": "2023-08-20",
+      "vote_average": 8.0,
+      "link": "https://escape-from-game-al9u0izxu-hiagosantossilvas-projects.vercel.app/",
+      "poster_path": "/midia/EscapaFromCapa.png",
+      "backdrop_path": "/midia/EscapeFromBanner.png",
+      "genres": ["Desktop","Construct"],
+      "warning": "Este projeto foi desenvolvido para uso em computadores."
+    },  
+    {
+      "id": 10,
+      "title": "Mario",
+      "overview": "Joguinho básico desenvolvido em HTML/CSS e JS",
+      "release_date": "2023-08-20",
+      "vote_average": 8.0,
+      "link": "https://mario-js-nxwx.vercel.app/",
+      "poster_path": "/midia/MarioCapa.png",
+      "backdrop_path": "/midia/MarioBanner.png",
+      "genres": ["Desktop","Javascript","HTML", "CSS"],
+      "warning": "Este projeto foi desenvolvido para uso em computadores."
+    }
+    
+   ]
 }
