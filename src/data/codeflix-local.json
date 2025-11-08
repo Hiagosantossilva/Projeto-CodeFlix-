@@ -15,7 +15,7 @@
     },
     {
       "id": 2,
-      "title": "Clone da Netflix",
+      "title": "Netflix Landing Page",
       "overview": "Réplica da interface da Netflix feita em React.js para fins de aprendizado. Por meio deste projeto foi desenvolvido a sua variação que se tornou este portfólio atual",
       "release_date": "2024-08-20",
       "vote_average": 5.0,
@@ -41,7 +41,7 @@
     },
     {
       "id": 4,
-      "title": "Site TimeShift",
+      "title": "TimeShift Catalogo",
       "overview": "Landing Page básica feita em JavaScript",
       "release_date": "2024-08-20",
       "vote_average": 3.0,
@@ -104,18 +104,7 @@
       "warning": ""
 
     },
-     {
-      "id": 9,
-      "title": "Escape From",
-      "overview": "Jogo em desenvolvimento utilizando o Construct",
-      "release_date": "2023-08-20",
-      "vote_average": 8.0,
-      "link": "https://escape-from-game.vercel.app/",
-      "poster_path": "/midia/EscapaFromCapa.png",
-      "backdrop_path": "/midia/EscapeFromBanner.png",
-      "genres": ["Desktop","Construct"],
-      "warning": "Este projeto foi desenvolvido para uso em computadores."
-    },  
+
     {
       "id": 10,
       "title": "Mario",
@@ -127,6 +116,19 @@
       "backdrop_path": "/midia/MarioBanner.png",
       "genres": ["Desktop","Javascript","HTML", "CSS"],
       "warning": "Este projeto foi desenvolvido para uso em computadores."
+    }, 
+    {
+      "id": 11,
+      "title": "TimeShift Site Oficial",
+      "overview": "Site oficial da agência Timeshift",
+      "release_date": "2025-04-20",
+      "vote_average": 8.0,
+      "link": "https://timeshift.com.br/",
+      "poster_path": "/midia/TimeshiftOficialCapa.png",
+      "backdrop_path": "/midia/TimeshiftOficialBanner.png",
+      "genres": ["Front-end", "Wordpress"],
+      "warning": ""
+
     }
 ],
    
@@ -145,7 +147,7 @@
     },
     {
       "id": 2,
-      "title": "Clone da Netflix",
+      "title": "Netflix Landing Page",
       "overview": "Réplica da interface da Netflix feita em React.js para fins de aprendizado. Por meio deste projeto foi desenvolvido a sua variação que se tornou este portfólio atual",
       "release_date": "2024-08-20",
       "vote_average": 5.0,
@@ -171,7 +173,7 @@
     },
     {
       "id": 4,
-      "title": "Site TimeShift",
+      "title": "TimeShift Catalogo",
       "overview": "Landing Page básica feita em JavaScript",
       "release_date": "2024-08-20",
       "vote_average": 3.0,
@@ -187,7 +189,7 @@
       "title": "Robotron",
       "overview": "Interface criada em Javascript para o projeto de formação Front-end da Alura",
       "release_date": "2024-08-20",
-      "vote_average": 4.0,
+      "vote_average": 3.0,
       "link": "https://alura-exercicios-js.vercel.app/?",
       "poster_path": "/midia/RobotronCapa.png",
       "backdrop_path": "/midia/RobotronBanner.png",
@@ -232,6 +234,18 @@
       "backdrop_path": "/midia/MarioBanner.png",
       "genres": ["Desktop","Javascript","HTML", "CSS"],
       "warning": "Este projeto foi desenvolvido para uso em computadores."
+    },
+     {
+      "id": 11,
+      "title": "FoodPeek",
+      "overview": "Landing Page de fast food responsiva",
+      "release_date": "2024-09-15",
+      "vote_average": 4.0,
+      "link": "https://projeto-food-peek.vercel.app/#",
+      "poster_path": "/midia/FoodPeekCapa.png",
+      "backdrop_path": "/midia/FoodPeekBanner.png",
+      "genres": ["Javascript","HTML", "CSS"],
+      "warning": ""
     }
    ],
     "jogos": [
