@@ -1,11 +1,21 @@
 {
   "short_name": "CodeFlix",
-  "name": "Hiago Santos Silva - CodeFlix",
+  "name": "CodeFlix Projects",
   "icons": [
     {
-      "src": "Logoicon.png",
+      "src": "logoicon.png",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/jpg"
+      "type": "image/png"
+    },
+    {
+      "src": "logoicon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logoicon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
   "start_url": ".",
@@ -13,4 +23,3 @@
   "theme_color": "#000000",
   "background_color": "#ffffff"
 }
-ss
