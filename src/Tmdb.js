@@ -17,12 +17,13 @@ const allBuckets = (db) => ([
   ...(db.python || [])
 ]);
 
-export default {
+// 🔹 Definindo o objeto antes de exportar
+const Tmdb = {
   async getHomeList() {
     return [
       { slug: 'principais', title: 'Principais', items: pageify(local.principais || []) },
-      { slug: 'javascript',     title: 'JavaScript',     items: pageify(local.javascript || []) },
-      { slug: 'python',     title: 'Python',     items: pageify(local.python || []) }
+      { slug: 'javascript', title: 'JavaScript', items: pageify(local.javascript || []) },
+      { slug: 'python', title: 'Python', items: pageify(local.python || []) }
     ];
   },
 
@@ -32,3 +33,6 @@ export default {
     return found || null;
   }
 };
+
+// ✅ Exporta o objeto nomeado
+export default Tmdb;
