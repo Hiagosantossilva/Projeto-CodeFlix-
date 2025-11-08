@@ -62,10 +62,10 @@
       "overview": "Aplicativo de Delivery completo e funcional desenvolvido para o segundo semestre de Ciência da Computação da faculdade Impacta. Criado utilizando ferramentas Low-code como FlutterFlow, Xano e n8n para criar processos automatizados. Projeto desenvolvido em grupo em um ambiente de metodologias ágeis e cooperação.",
       "release_date": "2025-08-20",
       "vote_average": 9.0,
-      "link": "https://app.flutterflow.io/share/meme-bpyvdm",
+      "link": "https://delivery-view-code.flutterflow.app",
       "poster_path": "/midia/SaborLocalCapa.png",
       "backdrop_path": "/midia/SaborLocalBanner.png",
-      "genres": ["Low-Code","FlutterFlow", "Xano", "n8n"]
+      "genres": ["Mobile","Low-Code","FlutterFlow", "Xano", "n8n"]
     },
     {
       "id": 7,
@@ -82,11 +82,22 @@
       "id": 8,
       "title": "Jornal Tech",
       "overview": "Um dos meus primeiros projetos utilizando JavaScript, interface com código arcaico e pouco responsiva, mas criativa e inventiva",
-      "release_date": "2024-08-20",
-      "vote_average": 3.0,
+      "release_date": "2022-08-20",
+      "vote_average": 2.0,
       "link": "https://jornal-tech-puim.vercel.app/",
       "poster_path": "/midia/JornalCapa.png",
       "backdrop_path": "/midia/JornalBanner.png",
       "genres": ["Front-end", "Javascript"]
+    },
+   {
+      "id": 9,
+      "title": "Escape From",
+      "overview": "Jogo em desenvolvimento utilizando o Construct (Apenas para Desktop)",
+      "release_date": "2023-08-20",
+      "vote_average": 8.0,
+      "link": "https://escape-from-game-al9u0izxu-hiagosantossilvas-projects.vercel.app/",
+      "poster_path": "/midia/EscapaFromCapa.png",
+      "backdrop_path": "/midia/EscapaFromBanner.png",
+      "genres": ["Desktop","Construct"]
     }]
 }
