@@ -3,13 +3,13 @@
    
      {
       "id": 1,
-      "title": "Planner de Tarefas",
-      "overview": "Assistente de planejamento de tarefas feito com JavaScript",
-      "release_date": "2024-01-15",
-      "vote_average": 5.0,
-      "link": "https://projeto-planner-rho.vercel.app/",
-      "poster_path": "/midia/PlannerCapa.png",
-      "backdrop_path": "/midia/PlannerBanner.png",
+      "title": "Evolv - Planner",
+      "overview": "Planner de tarefas completo criado em JavaScript, com gerador de tarefas e tabelas com Gameficação e sistema de progresso.",
+      "release_date": "2025-11-16",
+      "vote_average": 8.0,
+      "link": "https://evolv-planner.vercel.app/",
+      "poster_path": "/midia/EvolvCapa.png",
+      "backdrop_path": "/midia/EvolvBanner.png",
       "genres": ["Front-end", "Javascript"],
       "warning": ""
     },
@@ -133,15 +133,15 @@
 ],
    
    "Javascript": [
-{
+     {
       "id": 1,
-      "title": "Planner de Tarefas",
-      "overview": "Assistente de planejamento de tarefas feito com JavaScript",
-      "release_date": "2024-01-15",
-      "vote_average": 5.0,
-      "link": "https://projeto-planner-rho.vercel.app/",
-      "poster_path": "/midia/PlannerCapa.png",
-      "backdrop_path": "/midia/PlannerBanner.png",
+      "title": "Evolv - Planner",
+      "overview": "Planner de tarefas completo criado em JavaScript, com gerador de tarefas e tabelas com Gameficação e sistema de progresso.",
+      "release_date": "2025-11-16",
+      "vote_average": 8.0,
+      "link": "https://evolv-planner.vercel.app/",
+      "poster_path": "/midia/EvolvCapa.png",
+      "backdrop_path": "/midia/EvolvBanner.png",
       "genres": ["Front-end", "Javascript"],
       "warning": ""
     },
@@ -246,6 +246,18 @@
       "backdrop_path": "/midia/FoodPeekBanner.png",
       "genres": ["Javascript","HTML", "CSS"],
       "warning": ""
+    },
+    {
+      "id": 11,
+      "title": "Planner de Tarefas",
+      "overview": "Assistente de planejamento de tarefas feito com JavaScript",
+      "release_date": "2024-01-15",
+      "vote_average": 5.0,
+      "link": "https://projeto-planner-rho.vercel.app/",
+      "poster_path": "/midia/PlannerCapa.png",
+      "backdrop_path": "/midia/PlannerBanner.png",
+      "genres": ["Front-end", "Javascript"],
+      "warning": ""
     }
    ],
     "jogos": [
@@ -273,6 +285,5 @@
       "genres": ["Desktop","Javascript","HTML", "CSS"],
       "warning": "Este projeto foi desenvolvido para uso em computadores."
     }
-    
    ]
 }
