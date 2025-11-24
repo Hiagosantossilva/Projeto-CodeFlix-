@@ -65,6 +65,7 @@ export default function App() {
 
       <footer>
         Feito por Hiago Santos Silva
+        Email: Hiagoss100@outlook.com - Contato: 11963146071
       </footer>
 
       {/* ✅ Exibe o modal global se houver item selecionado */}
