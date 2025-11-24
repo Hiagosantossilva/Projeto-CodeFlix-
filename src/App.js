@@ -64,8 +64,8 @@ export default function App() {
       </section>
 
       <footer>
-        Feito por Hiago Santos Silva
-        Email: Hiagoss100@outlook.com - Contato: 11963146071
+        <p>Feito por Hiago Santos Silva</p>
+        <p>Email: Hiagoss100@outlook.com - Contato: 11963146071 </p>
       </footer>
 
       {/* ✅ Exibe o modal global se houver item selecionado */}
