@@ -8,8 +8,8 @@
       "release_date": "2025-11-16",
       "vote_average": 8.0,
       "link": "https://tomorrow-planner-git-main-hiagosantossilvas-projects.vercel.app/",
-      "poster_path": "/midia/Tomorrow.png",
-      "backdrop_path": "/midia/Tomorrow.png",
+      "poster_path": "/midia/TomorrowCapa.png",
+      "backdrop_path": "/midia/TomorrowBanner.png",
       "genres": ["Front-end", "Javascript"],
       "warning": ""
     },
