@@ -3,13 +3,13 @@
    
      {
       "id": 1,
-      "title": "Evolv - Planner",
+      "title": "Tomorrow - Planner",
       "overview": "Planner de tarefas completo criado em JavaScript, com gerador de tarefas e tabelas com Gameficação e sistema de progresso.",
       "release_date": "2025-11-16",
       "vote_average": 8.0,
-      "link": "https://evolv-planner.vercel.app/",
-      "poster_path": "/midia/EvolvCapa.png",
-      "backdrop_path": "/midia/EvolvBanner.png",
+      "link": "https://tomorrow-planner-git-main-hiagosantossilvas-projects.vercel.app/",
+      "poster_path": "/midia/Tomorrow.png",
+      "backdrop_path": "/midia/Tomorrow.png",
       "genres": ["Front-end", "Javascript"],
       "warning": ""
     },
