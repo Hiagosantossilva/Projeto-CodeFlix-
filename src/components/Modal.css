@@ -17,22 +17,35 @@
   overflow: hidden;
   position: relative;
   animation: fadeIn 0.3s ease;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .modal-backdrop {
   width: 100%;
-  max-height: 350px;
+  max-height: 320px;
   object-fit: cover;
   display: block;
 }
 
 .modal-content {
   padding: 20px;
+  overflow-y: auto;
 }
 
 .modal-description {
   margin: 15px 0;
   line-height: 1.5;
+}
+
+.modal-warning {
+  padding: 8px 10px;
+  background: rgba(255, 165, 0, 0.15);
+  border: 1px solid rgba(255, 165, 0, 0.35);
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 
 .modal-buttons {
@@ -77,6 +90,41 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 760px) {
+  .modal-container {
+    width: 94%;
+    max-height: 85vh;
+  }
+  .modal-backdrop {
+    max-height: 220px;
+  }
+  .modal-content {
+    padding: 16px;
+  }
+  .modal-content h2 {
+    font-size: 20px;
+  }
+  .modal-description,
+  .modal-genres,
+  .modal-warning {
+    font-size: 13px;
+  }
+  .btn-primary,
+  .btn-secondary {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 520px) {
+  .modal-container {
+    width: 96%;
+  }
+  .modal-backdrop {
+    max-height: 180px;
   }
 }
 

@@ -2,9 +2,10 @@ body {
   overflow-x: hidden;
 }
 .featured{
-    height: 100vh;
+    height: min(100vh, 720px);
     overflow: hidden;
-
+    background-position: center top;
+    animation: featured-pan 18s ease-in-out infinite alternate;
 }
 
 .featured--vertical{
@@ -106,9 +107,20 @@ body {
     color: #999;
 }
 
+@keyframes featured-pan {
+    0% { background-position: 45% 0%; }
+    100% { background-position: 55% 100%; }
+}
+
+@media (prefers-reduced-motion: reduce){
+    .featured{
+        animation: none;
+    }
+}
+
 @media (max-width: 760px){
     .featured{
-        height: 90vh;
+        height: min(90vh, 560px);
 
     }
     .featured--name{

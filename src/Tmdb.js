@@ -12,20 +12,22 @@ function pageify(results) {
 }
 
 // Pool para getMovieInfo
-const allBuckets = (db) => ([
-  ...(db.principais || []),
-  ...(db.python || [])
-]);
+const allBuckets = (db) => (
+  Object.values(db || {})
+    .filter(Array.isArray)
+    .flat()
+);
 
 // 🔹 Definindo o objeto antes de exportar
 const Tmdb = {
   async getHomeList() {
-    return [
-      { slug: 'principais', title: 'Principais', items: pageify(local.principais || []) },
-      { slug: 'Javascript', title: 'Javascript', items: pageify(local.Javascript || []) },
-      { slug: 'jogos', title: 'Jogos', items: pageify(local.jogos || []) }
-
-    ];
+    return Object.entries(local || {})
+      .filter(([, value]) => Array.isArray(value))
+      .map(([key, value]) => ({
+        slug: key,
+        title: key,
+        items: pageify(value || [])
+      }));
   },
 
   async getMovieInfo(id) {
