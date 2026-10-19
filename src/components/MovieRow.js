@@ -1,5 +1,7 @@
 import React, { useRef, useState, useEffect, useId } from 'react';
 import Icon from './Icon';
+import ProjectBrand from './ProjectBrand';
+import SuiteBadge from './SuiteBadge';
 import { getProjectTitle, resolveAsset, handleImageError } from '../projectUtils';
 import './MovieRow.css';
 
@@ -59,9 +61,11 @@ export default function MovieRow({ title, items, onSelect }) {
             const projectTitle = getProjectTitle(item);
             return (
               <li className="movieRow--item" key={`${projectTitle}-${item.poster_path}`}>
-                <button type="button" className="project-card" onClick={() => onSelect(item)} aria-label={`Ver detalhes de ${projectTitle}`} aria-haspopup="dialog">
-                  <span className="project-card--cover">
+                <button type="button" className="project-card" onClick={() => onSelect(item)} aria-label={`Ver detalhes de ${projectTitle}${item.suite_name ? `. Pacote ${item.suite_name}` : ''}`} aria-haspopup="dialog">
+                  <span className={`project-card--cover${item.logo_path ? ' project-card--cover-branded' : ''}`}>
                     <img src={resolveAsset(item.backdrop_path || item.poster_path)} alt="" loading="lazy" decoding="async" onError={handleImageError} />
+                    <ProjectBrand item={item} />
+                    <SuiteBadge item={item} variant="cover" />
                     <span className="project-card--overlay"><Icon name="info" /></span>
                   </span>
                   <span className="project-card--title">{projectTitle}</span>

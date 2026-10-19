@@ -75,3 +75,11 @@ Essas verificações de navegador foram executadas durante a revisão; não há 
 - Prisma: captura do editor de documento local de [prisma-olive-two.vercel.app](https://prisma-olive-two.vercel.app/), com biblioteca de blocos e configurações do relatório. O documento está sem fonte de dados vinculada; a imagem não representa resultados de campanhas reais. Imagem: `public/midia/Prisma-2026-10-19.png`.
 
 São prints reais do navegador em 1600×900, usados como capa e banner. Os nomes incluem a data da captura para evitar o reaproveitamento de imagens antigas em cache. Tomorrow foi atualizado nas duas categorias em que aparece; Prisma foi incluído em Principais projetos e JavaScript. As descrições foram baseadas nas telas e nos recursos apresentados pelas versões publicadas.
+
+### Logos nas capas
+
+As logos originais fornecidas de Tomorrow e Prisma ficam em `public/midia/TomorrowLogo.png` e `public/midia/PrismaLogo.png`. O componente `ProjectBrand` sobrepõe a marca aos prints com um degradê de contraste e a cor de cada app. A composição aparece nas fileiras, no destaque e nos detalhes.
+
+Os campos opcionais `logo_path`, `brand_name`, `brand_caption`, `brand_color` e `logo_scale` controlam a apresentação pelo catálogo. Os prints originais são preservados, e o movimento ao passar o mouse respeita a preferência por movimento reduzido.
+
+Tomorrow e Prisma compartilham `suite_name: "My Workstation"`. O componente `SuiteBadge` identifica o pacote com um pequeno ícone de estrela nas capas e uma tag no destaque e nos detalhes.

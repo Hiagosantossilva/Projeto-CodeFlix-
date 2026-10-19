@@ -1,5 +1,7 @@
 import React from 'react';
 import Icon from './Icon';
+import ProjectBrand from './ProjectBrand';
+import SuiteBadge from './SuiteBadge';
 import { getProjectTitle, getProjectGenres, getProjectYear, resolveAsset, resolveProjectLink, handleImageError } from '../projectUtils';
 import './FeaturedMovie.css';
 
@@ -19,7 +21,11 @@ export default function FeaturedMovie({ item, onOpenModal }) {
         fetchPriority="high"
       />
       <div className="featured--content">
-        <p className="featured--kicker">Projeto em destaque</p>
+        <p className="featured--kicker">
+          <span>Projeto em destaque</span>
+          <SuiteBadge item={item} />
+        </p>
+        <ProjectBrand item={item} variant="featured" />
         <h1 className="featured--name" id="featured-title">{title}</h1>
         <div className="featured--info">
           <span>Projeto</span>

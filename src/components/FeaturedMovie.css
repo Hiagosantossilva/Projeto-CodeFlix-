@@ -38,6 +38,10 @@
 }
 
 .featured--kicker {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
   margin: 0 0 12px;
   color: #e5e5e5;
   font-size: 11px;

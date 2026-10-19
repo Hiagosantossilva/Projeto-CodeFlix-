@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useId } from 'react';
 import Icon from './Icon';
+import ProjectBrand from './ProjectBrand';
+import SuiteBadge from './SuiteBadge';
 import { getProjectTitle, getProjectGenres, getProjectYear, resolveAsset, resolveProjectLink, handleImageError } from '../projectUtils';
 import './Modal.css';
 
@@ -68,6 +70,7 @@ export default function Modal({ item, onClose }) {
         </button>
       </div>
       <div className="modal-hero">
+        <SuiteBadge item={item} variant="cover" />
         <img
           src={resolveAsset(item.backdrop_path || item.poster_path)}
           alt=""
@@ -75,6 +78,7 @@ export default function Modal({ item, onClose }) {
           onError={handleImageError}
         />
         <div className="modal-hero--content">
+          <ProjectBrand item={item} variant="modal" />
           <h2 id={titleId}>{title}</h2>
           {link && (
             <a href={link} target="_blank" rel="noopener noreferrer" className="button button--primary">
@@ -83,7 +87,7 @@ export default function Modal({ item, onClose }) {
           )}
         </div>
       </div>
-      <div className={`modal-content${genres.length ? '' : ' modal-content--single'}`}>
+      <div className={`modal-content${genres.length || item.suite_name ? '' : ' modal-content--single'}`}>
         <div className="modal-summary">
           <p className="modal-meta">{year && <span>{year}</span>}<span>Projeto</span></p>
           {item.warning && (
@@ -92,9 +96,14 @@ export default function Modal({ item, onClose }) {
           <p className="modal-description">{item.overview}</p>
           <button type="button" className="modal-return" onClick={onClose}>Voltar ao catálogo</button>
         </div>
-        {genres.length > 0 && (
+        {(genres.length > 0 || item.suite_name) && (
           <div className="modal-facts">
-            <p><span>Tecnologias e categorias: </span>{genres.join(', ')}</p>
+            {genres.length > 0 && (
+              <p><span className="modal-facts--label">Tecnologias e categorias: </span>{genres.join(', ')}</p>
+            )}
+            {item.suite_name && (
+              <p className="modal-suite"><span className="modal-facts--label">Pacote:</span><SuiteBadge item={item} /></p>
+            )}
           </div>
         )}
       </div>

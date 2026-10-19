@@ -160,8 +160,16 @@
   line-height: 1.7;
 }
 
-.modal-facts span {
+.modal-facts--label {
   color: #929292;
+}
+
+.modal-facts .modal-suite {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
 }
 
 .modal-return {

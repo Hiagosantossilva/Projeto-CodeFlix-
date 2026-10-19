@@ -1,0 +1,106 @@
+.project-brand {
+  pointer-events: none;
+}
+
+.project-brand--logo {
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 16px #0006);
+  transform: scale(var(--logo-scale));
+  transition: transform 180ms ease;
+}
+
+.project-brand--card {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px;
+  background:
+    radial-gradient(ellipse at 50% 30%, color-mix(in srgb, var(--brand-color) 28%, transparent), transparent 75%),
+    linear-gradient(180deg, #07101973, #071019ed);
+}
+
+.project-brand--card .project-brand--logo {
+  width: 28%;
+  height: clamp(44px, 21cqw, 70px);
+  flex-shrink: 0;
+}
+
+.project-brand--card.project-brand--suite {
+  padding-top: 32px;
+  gap: 4px;
+}
+
+@container (max-width: 250px) {
+  .project-brand--card.project-brand--suite .project-brand--logo {
+    height: 38px;
+  }
+}
+
+.project-brand--name {
+  max-width: 100%;
+  color: white;
+  font-size: clamp(24px, 9cqw, 34px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -.035em;
+  text-shadow: 0 2px 12px #0006;
+}
+
+.project-brand--caption {
+  color: #e1e8ed;
+  font-size: clamp(9px, 3.2cqw, 11px);
+  line-height: 1.3;
+}
+
+.project-brand--featured,
+.project-brand--modal {
+  display: block;
+  width: fit-content;
+  margin-bottom: 14px;
+}
+
+.project-brand--featured .project-brand--logo {
+  width: 108px;
+  height: 88px;
+  object-position: left bottom;
+}
+
+.project-brand--modal .project-brand--logo {
+  width: 82px;
+  height: 64px;
+  object-position: left bottom;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .project-card:hover .project-brand--logo {
+    transform: translateY(-3px) scale(calc(var(--logo-scale) * 1.03));
+  }
+}
+
+@media (max-width: 600px) {
+  .project-brand--featured .project-brand--logo {
+    width: 84px;
+    height: 66px;
+  }
+
+  .project-brand--modal .project-brand--logo {
+    width: 66px;
+    height: 50px;
+  }
+}
+
+@media (max-height: 500px) {
+  .project-brand--modal .project-brand--logo {
+    width: 52px;
+    height: 38px;
+  }
+
+  .project-brand--modal {
+    margin-bottom: 8px;
+  }
+}

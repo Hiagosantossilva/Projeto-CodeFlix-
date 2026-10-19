@@ -115,14 +115,19 @@
   overflow: hidden;
   border-radius: 6px;
   background: var(--surface);
+  container-type: inline-size;
 }
 
-.project-card--cover img {
+.project-card--cover > img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 200ms ease;
+}
+
+.project-card--cover-branded > img {
+  filter: brightness(.75) saturate(.8);
 }
 
 .project-card--overlay {
@@ -174,7 +179,7 @@
     opacity: 1;
   }
 
-  .project-card:hover .project-card--cover img {
+  .project-card:hover .project-card--cover > img {
     transform: scale(1.035);
   }
 
