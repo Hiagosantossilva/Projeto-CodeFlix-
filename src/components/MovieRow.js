@@ -1,78 +1,76 @@
-import React, { useState } from 'react';
+import React, { useRef, useState, useEffect, useId } from 'react';
+import Icon from './Icon';
+import { getProjectTitle, resolveAsset, handleImageError } from '../projectUtils';
 import './MovieRow.css';
-import NavigateNextIcon from '@mui/icons-material/NavigateNext';
-import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 
 export default function MovieRow({ title, items, onSelect }) {
-  const [scrollX, setScrollX] = useState(0);
-
+  const listRef = useRef(null);
+  const headingId = useId();
+  const listId = useId();
+  const [canScroll, setCanScroll] = useState({ left: false, right: false });
   const results = items?.results ?? [];
-  const itemWidth = 150;
-  const listW = results.length * itemWidth;
 
-  const resolvePoster = (poster, fallbackBackdrop) => {
-    const p = poster || fallbackBackdrop;
-    if (!p) return '/placeholder.png';
-    if (p.startsWith('http') || p.startsWith('/')) return p;
-    return `https://image.tmdb.org/t/p/w300${p}`;
-  };
+  useEffect(() => {
+    const list = listRef.current;
+    if (!list) return;
+    const update = () => setCanScroll({
+      left: list.scrollLeft > 2,
+      right: list.scrollLeft + list.clientWidth < list.scrollWidth - 2,
+    });
+    update();
+    list.addEventListener('scroll', update, { passive: true });
+    const observer = new ResizeObserver(update);
+    observer.observe(list);
+    return () => {
+      list.removeEventListener('scroll', update);
+      observer.disconnect();
+    };
+  }, [items]);
 
-  const handleLeftArrow = () => {
-    let x = scrollX + Math.round(window.innerWidth / 2);
-    if (x > 0) x = 0;
-    setScrollX(x);
-  };
+  function scroll(direction) {
+    const list = listRef.current;
+    if (list) list.scrollBy({
+      left: direction * list.clientWidth * 0.8,
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',
+    });
+  }
 
-  const handleRightArrow = () => {
-    let x = scrollX - Math.round(window.innerWidth / 2);
-    const maxX = (window.innerWidth - listW) - 60;
-    if (x < maxX) x = maxX;
-    setScrollX(x);
-  };
+  if (results.length === 0) return null;
 
   return (
-    <div className="movieRow">
-      <h2>{title}</h2>
-
-      <div
-        className="movieRow--left"
-        onClick={handleLeftArrow}
-        role="button"
-        aria-label="voltar"
-      >
-        <NavigateBeforeIcon style={{ fontSize: 50 }} />
-      </div>
-
-      <div
-        className="movieRow--right"
-        onClick={handleRightArrow}
-        role="button"
-        aria-label="avançar"
-      >
-        <NavigateNextIcon style={{ fontSize: 50 }} />
-      </div>
-
-      <div className="movieRow--listarea">
-        <div
-          className="movieRow--list"
-          style={{ marginLeft: scrollX, width: listW }}
-        >
-          {results.map((item) => (
-            <div
-              className="movieRow--item"
-              key={item.id}
-              onClick={() => onSelect(item)} // Abre pop-up
-            >
-              <img
-                src={resolvePoster(item.poster_path, item.backdrop_path)}
-                alt={item.title || item.name || 'Poster'}
-                loading="lazy"
-              />
-              <div className="titulo">{item.title}</div>
-            </div>
-          ))}
+    <section className="movieRow" aria-labelledby={headingId}>
+      <div className="movieRow--heading">
+        <div className="movieRow--title">
+          <h2 id={headingId}>{title}</h2>
+          <span className="sr-only">{results.length} {results.length === 1 ? 'projeto' : 'projetos'}</span>
         </div>
       </div>
-    </div>
+      <div className="movieRow--carousel">
+        <div className="movieRow--controls">
+          <button type="button" className="movieRow--arrow movieRow--arrow-left" onClick={() => scroll(-1)} disabled={!canScroll.left} aria-label={`Voltar em ${title}`} aria-controls={listId}>
+            <Icon name="left" />
+          </button>
+          <button type="button" className="movieRow--arrow movieRow--arrow-right" onClick={() => scroll(1)} disabled={!canScroll.right} aria-label={`Avançar em ${title}`} aria-controls={listId}>
+            <Icon name="right" />
+          </button>
+        </div>
+        <ul className="movieRow--list" ref={listRef} id={listId} tabIndex={0} aria-label={`Projetos de ${title}`}>
+          {results.map(item => {
+            const projectTitle = getProjectTitle(item);
+            return (
+              <li className="movieRow--item" key={`${projectTitle}-${item.poster_path}`}>
+                <button type="button" className="project-card" onClick={() => onSelect(item)} aria-label={`Ver detalhes de ${projectTitle}`} aria-haspopup="dialog">
+                  <span className="project-card--cover">
+                    <img src={resolveAsset(item.backdrop_path || item.poster_path)} alt="" loading="lazy" decoding="async" onError={handleImageError} />
+                    <span className="project-card--overlay"><Icon name="info" /></span>
+                  </span>
+                  <span className="project-card--title">{projectTitle}</span>
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </section>
   );
 }

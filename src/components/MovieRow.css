@@ -1,82 +1,195 @@
-﻿.movieRow {
-    margin-bottom: 30px;
+.movieRow {
+  --card-width: clamp(230px, 23.3vw, 360px);
+  margin-bottom: 28px;
+  min-width: 0;
+}
 
+.movieRow--heading {
+  margin: 0 var(--gutter) 8px;
 }
 
 .movieRow h2 {
-    margin: 0px 10px 0px 30px;
+  margin: 0;
+  font-size: clamp(17px, 1.45vw, 21px);
+  line-height: 1.3;
+  font-weight: 600;
+  letter-spacing: -.015em;
 }
 
-.movieRow--listarea {
-    overflow-x: hidden;
-    padding-left: 30px;
+.movieRow--carousel {
+  position: relative;
+}
 
+.movieRow--controls {
+  position: absolute;
+  z-index: 2;
+  inset: 6px 0 auto;
+  height: calc(var(--card-width) * .5625);
+  pointer-events: none;
 }
-.movieRow .movieRow--item a.movieRow--link,
-.movieRow .movieRow--item a.movieRow--link:link,
-.movieRow .movieRow--item a.movieRow--link:visited {
-  text-decoration: none;
-  color: inherit;
-  text-align: center;
-  font-size: 15px;
-  font-weight: 200;
- 
+
+.movieRow--arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  padding: 0;
+  width: 44px;
+  height: 60px;
+  background: #141414e6;
+  color: white;
+  border: 0;
+  border-radius: 999px;
+  pointer-events: auto;
+  transition: background-color 160ms ease, opacity 160ms ease;
 }
-.titulo{
-    text-align: center;
-    font-weight: 100;
+
+.movieRow--arrow-left {
+  left: max(4px, calc(var(--gutter) - 20px));
 }
-.titulo:hover{
-    cursor: pointer;
+
+.movieRow--arrow-right {
+  right: max(4px, calc(var(--gutter) - 20px));
 }
+
+.movieRow--arrow svg {
+  width: 26px;
+  height: 26px;
+}
+
+.movieRow--arrow:hover:not(:disabled) {
+  background: #323232;
+}
+
+.movieRow--arrow:disabled {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .movieRow--list {
-    transition: all ease 0.5s;
-}
-.movieRow--item{
-    display: inline-block;  
-    width: 150px;
-    height: 235px; 
-}
-.movieRow--item img {
-    width: 100%;
-    height: 100%; 
-    transform: scale(0.9)
-}
-
-.movieRow--item img:hover {
-    transition: all ease 0.2s;
-    cursor: pointer;
-    transform: scale(1)
+  display: flex;
+  gap: 8px;
+  margin: 0;
+  padding: 6px var(--gutter) 8px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scroll-padding-inline: var(--gutter);
+  list-style: none;
+  scrollbar-width: none;
 }
 
-.movieRow--left, .movieRow--right{
-    position: absolute;
-    width: 40px;
-    height: 245px;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 99;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    cursor: pointer;
+.movieRow--list::-webkit-scrollbar {
+  display: none;
+}
+
+.movieRow--list:focus-visible {
+  outline-offset: -3px;
+}
+
+.movieRow--item {
+  flex: 0 0 var(--card-width);
+  min-width: 0;
+  scroll-snap-align: start;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: 6px;
+  background: none;
+  color: var(--text);
+  text-align: left;
+}
+
+.project-card--cover {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 6px;
+  background: var(--surface);
+}
+
+.project-card--cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 200ms ease;
+}
+
+.project-card--overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 12px;
+  background: linear-gradient(transparent 45%, #0008);
+  color: white;
+  opacity: 0;
+  transition: opacity 160ms ease;
+}
+
+.project-card--overlay svg {
+  width: 27px;
+  height: 27px;
+}
+
+.project-card--title {
+  display: block;
+  overflow: hidden;
+  margin-top: 8px;
+  color: #c4c4c4;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.project-card:focus-visible .project-card--overlay {
+  opacity: 1;
+}
+
+.project-card:focus-visible .project-card--title {
+  color: white;
+}
+
+@media (hover: hover) {
+  .movieRow--arrow {
     opacity: 0;
-    transition: all ease 0.5s;
-}
-.movieRow--left{
-    left: 0;
-}
-.movieRow--right{
-    right: 0;
-}
+  }
 
-.movieRow:hover .movieRow--left, .movieRow:hover .movieRow--right{
+  .movieRow--carousel:hover .movieRow--arrow:not(:disabled),
+  .movieRow--carousel:focus-within .movieRow--arrow:not(:disabled) {
     opacity: 1;
+  }
+
+  .project-card:hover .project-card--cover img {
+    transform: scale(1.035);
+  }
+
+  .project-card:hover .project-card--overlay {
+    opacity: 1;
+  }
+
+  .project-card:hover .project-card--title {
+    color: white;
+  }
 }
 
-@media (max-width: 760px){
-    .movieRow--left,
-    .movieRow--right{
-        opacity: 1;
-    }
+@media (max-width: 600px) {
+  .movieRow {
+    --card-width: min(74vw, 320px);
+    margin-bottom: 24px;
+  }
 }

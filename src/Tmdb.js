@@ -1,41 +1,32 @@
-// 100% LOCAL — compatível com o formato TMDB
 import local from './data/codeflix-local.json';
 
-// Embala arrays no formato que a UI espera (items.results)
-function pageify(results) {
-  return {
-    page: 1,
-    total_pages: 1,
-    total_results: results.length,
-    results
-  };
-}
-
-// Pool para getMovieInfo
-const allBuckets = (db) => (
-  Object.values(db || {})
-    .filter(Array.isArray)
-    .flat()
-);
-
-// 🔹 Definindo o objeto antes de exportar
-const Tmdb = {
-  async getHomeList() {
-    return Object.entries(local || {})
-      .filter(([, value]) => Array.isArray(value))
-      .map(([key, value]) => ({
-        slug: key,
-        title: key,
-        items: pageify(value || [])
-      }));
-  },
-
-  async getMovieInfo(id) {
-    const pool = allBuckets(local);
-    const found = pool.find(item => String(item.id) === String(id));
-    return found || null;
-  }
+const categoryTitles = {
+  principais: 'Principais projetos',
+  Javascript: 'JavaScript',
+  jogos: 'Jogos',
+  'Profissional - Desenvolvimento Web': 'Desenvolvimento web profissional',
 };
 
-// ✅ Exporta o objeto nomeado
+const Tmdb = {
+  async getHomeList() {
+    return Object.entries(local)
+      .filter(([, value]) => Array.isArray(value))
+      .map(([slug, projects]) => {
+        // A project can appear in several categories, but only once per row.
+        const seen = new Set();
+        const results = projects.filter(item => {
+          const key = `${item.title}-${item.poster_path}`;
+          if (seen.has(key)) return false;
+          seen.add(key);
+          return true;
+        });
+        return {
+          slug,
+          title: categoryTitles[slug] || slug,
+          items: { page: 1, total_pages: 1, total_results: results.length, results },
+        };
+      });
+  },
+};
+
 export default Tmdb;

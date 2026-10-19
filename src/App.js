@@ -1,90 +1,68 @@
 import React, { useState, useEffect } from 'react';
 import Tmdb from './Tmdb';
 import MovieRow from './components/MovieRow';
-import './App.css';
 import FeaturedMovie from './components/FeaturedMovie';
 import Header from './components/Header';
 import Modal from './components/Modal';
+import About from './components/About';
+import './App.css';
 
 export default function App() {
   const [movieList, setMovieList] = useState([]);
   const [featuredData, setFeaturedData] = useState(null);
   const [blackHeader, setBlackHeader] = useState(false);
-  const [selectedItem, setSelectedItem] = useState(null); // ✅ Adicionado
+  const [selectedItem, setSelectedItem] = useState(null);
+  const [loadError, setLoadError] = useState(false);
 
   useEffect(() => {
-    const loadAll = async () => {
-      // Pegando a lista TOTAL
-      let list = await Tmdb.getHomeList();
+    let active = true;
+    Tmdb.getHomeList().then(list => {
+      if (!active) return;
       setMovieList(list);
-
-      // Pegando o destaque
-      let principais = list.filter(i => i.slug === 'principais');
-      if (principais.length > 0 && principais[0].items.results.length > 0) {
-        let randomChose = Math.floor(
-          Math.random() * (principais[0].items.results.length - 1)
-        );
-        let chosen = principais[0].items.results[randomChose];
-
-        let chosenInfo = await Tmdb.getMovieInfo(chosen.id, 'tv');
-        setFeaturedData(chosenInfo);
-      }
-    };
-    loadAll();
+      const projects = list.find(row => row.slug === 'principais')?.items.results || [];
+      // Legacy IDs repeat across categories; keep the selected record itself.
+      setFeaturedData(projects[Math.floor(Math.random() * projects.length)] || null);
+    }).catch(() => {
+      if (active) setLoadError(true);
+    });
+    return () => { active = false; };
   }, []);
 
   useEffect(() => {
-    const scrollListener = () => {
-      setBlackHeader(window.scrollY > 10);
-    };
-    window.addEventListener('scroll', scrollListener);
-    return () => window.removeEventListener('scroll', scrollListener);
+    const onScroll = () => setBlackHeader(window.scrollY > 24);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   return (
-    <div className="page">
+    <div className="page" id="inicio">
+      <a className="skip-link" href="#projetos">Pular para os projetos</a>
       <Header black={blackHeader} />
-
-      {featuredData && (
-        <FeaturedMovie
-          item={featuredData}
-          onOpenModal={() => setSelectedItem(featuredData)} // ✅ botão "Ver Mais"
-        />
-      )}
-
-      <section className="lists">
-        {movieList.map((item, key) => (
-          <MovieRow
-            key={key}
-            title={item.title}
-            items={item.items}
-            onSelect={(data) => setSelectedItem(data)} // ✅ abre o modal
-          />
-        ))}
-      </section>
-
-      <footer>
-        <p>Feito por Hiago Santos Silva</p>
-        <p>Email: Hiagoss100@outlook.com - Contato: 11963146071 </p>
-      </footer>
-
-      {/* ✅ Exibe o modal global se houver item selecionado */}
-      {selectedItem && (
-        <Modal
-          item={selectedItem}
-          onClose={() => setSelectedItem(null)}
-        />
-      )}
-
-      {/* Tela de loading */}
-      {movieList.length <= 0 && (
-        <div className="loading">
-          <img
-            src="https://media1.giphy.com/media/v1.Y2lkPTZjMDliOTUyeW5mcjk0ajdqYWk1dWZoZzE0ajcwdzdtODk5MmJoenk1a2lkemtzeiZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/FgH5xSNjGHZsiYPWAX/giphy.gif"
-            alt="Carregando..."
-          />
+      <main id="conteudo">
+        {featuredData && <FeaturedMovie item={featuredData} onOpenModal={() => setSelectedItem(featuredData)} />}
+        <div className="lists" id="projetos" aria-label="Catálogo de projetos" tabIndex={-1}>
+          {movieList.map(item => <MovieRow key={item.slug} title={item.title} items={item.items} onSelect={setSelectedItem} />)}
         </div>
-      )}
+        {movieList.length > 0 && <About />}
+        {movieList.length === 0 && (
+          <div className="loading" role="status">
+            {loadError ? <p>Não foi possível carregar os projetos. Atualize a página para tentar novamente.</p> : <><span className="loading--spinner" /><p>Preparando os projetos…</p></>}
+          </div>
+        )}
+      </main>
+      <footer className="site-footer" id="contato">
+        <div>
+          <a className="footer--brand" href="#inicio">CODE<span>FLIX</span></a>
+          <p>Projetos, estudos e ideias que viraram código.</p>
+        </div>
+        <div className="footer--contact">
+          <p>Desenvolvido por <strong>Hiago Santos Silva</strong></p>
+          <a href="mailto:Hiagoss100@outlook.com">Hiagoss100@outlook.com</a>
+          <a href="tel:+5511963146071">(11) 96314-6071</a>
+        </div>
+      </footer>
+      {selectedItem && <Modal item={selectedItem} onClose={() => setSelectedItem(null)} />}
     </div>
   );
 }

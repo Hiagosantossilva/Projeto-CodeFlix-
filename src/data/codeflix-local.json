@@ -1,35 +1,32 @@
 {
   "principais": [
     {
-      "id": 6,
-      "title": "Sabor Local",
-      "overview": "Aplicativo de Delivery completo e funcional desenvolvido para o segundo semestre de Ciência da Computação da faculdade Impacta. Criado utilizando ferramentas Low-code como FlutterFlow, Xano e n8n para criar processos automatizados. Projeto desenvolvido em grupo em um ambiente de metodologias ágeis e cooperação.",
-      "release_date": "2025-08-20",
-      "vote_average": 9,
-      "link": "https://delivery-view-code.flutterflow.app",
-      "poster_path": "/midia/SaborLocalCapa.png",
-      "backdrop_path": "/midia/SaborLocalBanner.png",
-      "genres": [
-        "Mobile",
-        "Low-Code",
-        "FlutterFlow",
-        "Xano",
-        "n8n"
-      ],
-      "warning": "Este projeto foi desenvolvido para dispositivos móveis."
-    },
-    {
       "id": 1,
       "title": "Tomorrow - Planner",
-      "overview": "Planner de tarefas completo criado em JavaScript, com gerador de tarefas e tabelas com Gameficação e sistema de progresso.",
+      "overview": "Aplicativo de organização pessoal e projetos com tarefas, quadros, calendário, cadernos e lembretes. Oferece modelos de planejamento semanal, projetos Kanban e estudos, reunindo diferentes formas de organizar a rotina em uma interface integrada.",
       "release_date": "2025-11-16",
       "vote_average": 9,
       "link": "https://tomorrow-planner.vercel.app/",
-      "poster_path": "/midia/TomorrowCapa.png",
-      "backdrop_path": "/midia/TomorrowBanner.png",
+      "poster_path": "/midia/Tomorrow-2026-10-19.png",
+      "backdrop_path": "/midia/Tomorrow-2026-10-19.png",
       "genres": [
         "Front-end",
         "Javascript"
+      ],
+      "warning": ""
+    },
+    {
+      "id": 16,
+      "title": "Prisma",
+      "overview": "Aplicativo para criar relatórios editáveis de Meta Ads com um editor visual de blocos. Reúne indicadores, gráficos, tabelas e análises em documentos personalizáveis, com organização por clientes, importação de dados CSV/XLSX, modelos para leads, vendas e visão executiva e exportação em PDF.",
+      "release_date": "",
+      "link": "https://prisma-olive-two.vercel.app/",
+      "poster_path": "/midia/Prisma-2026-10-19.png",
+      "backdrop_path": "/midia/Prisma-2026-10-19.png",
+      "genres": [
+        "Meta Ads",
+        "Relatórios",
+        "JavaScript"
       ],
       "warning": ""
     },
@@ -49,6 +46,39 @@
       "warning": ""
     },
     {
+      "id": 9,
+      "title": "Escape From",
+      "overview": "Jogo em desenvolvimento utilizando o Construct",
+      "release_date": "2023-08-20",
+      "vote_average": 8,
+      "link": "https://escape-from-game.vercel.app/",
+      "poster_path": "/midia/EscapaFromCapa.png",
+      "backdrop_path": "/midia/EscapeFromBanner.png",
+      "genres": [
+        "Desktop",
+        "Construct"
+      ],
+      "warning": "Este projeto foi desenvolvido para uso em computadores."
+    },
+    {
+      "id": 6,
+      "title": "Sabor Local",
+      "overview": "Aplicativo de Delivery completo e funcional desenvolvido para o segundo semestre de Ciência da Computação da faculdade Impacta. Criado utilizando ferramentas Low-code como FlutterFlow, Xano e n8n para criar processos automatizados. Projeto desenvolvido em grupo em um ambiente de metodologias ágeis e cooperação.",
+      "release_date": "2025-08-20",
+      "vote_average": 9,
+      "link": "https://delivery-view-code.flutterflow.app",
+      "poster_path": "/midia/SaborLocalCapa.png",
+      "backdrop_path": "/midia/SaborLocalBanner.png",
+      "genres": [
+        "Mobile",
+        "Low-Code",
+        "FlutterFlow",
+        "Xano",
+        "n8n"
+      ],
+      "warning": "Este projeto foi desenvolvido para dispositivos móveis."
+    },
+    {
       "id": 13,
       "title": "The Manna Method",
       "overview": "Desenvolvi uma landing page para a empresa Bluepeak, utilizando HTML, CSS e JavaScript, com foco em conversão e experiência do usuário. O projeto apresenta o produto digital The Manna Method, estruturando de forma estratégica as seções de copy (problema, solução, benefícios, bônus e oferta) para engajar o público e incentivar a ação. A página é responsiva, organizada e alinhada a boas práticas de UX e marketing digital.",
@@ -61,17 +91,33 @@
       "warning": ""
     },
     {
-      "id": 12,
-      "title": "Evilasio Gouveia",
-      "overview": "Desenvolvi uma landing page para o autor Evilasio Gouveia, utilizando HTML, CSS e JavaScript, com foco em conversão e clareza de comunicação. O projeto apresenta o e-book O Caminho da Mente Equilibrada e Plena, organizando estrategicamente as seções de copy para destacar dores, benefícios, método, autoridade e oferta, conduzindo o público de forma clara até a ação de compra. A página foi construída com estrutura responsiva, visual organizado e alinhamento às boas práticas de UX e marketing digital.",
-      "release_date": "2026-03-13",
-      "vote_average": 8,
-      "link": "menteequilibradaeplena.opoderdopensamento.com",
-      "poster_path": "/midia/PlenaLuzCapa.png",
-      "backdrop_path": "/midia/PlenaLuzBanner.png",
+      "id": 3,
+      "title": "ChatBot Impacta",
+      "overview": "ChatBot simples consumindo uma API de LLM.",
+      "release_date": "2025-01-15",
+      "vote_average": 5,
+      "link": "https://chatbot-faculdade-impacta-hpxy.vercel.app/",
+      "poster_path": "/midia/ChatbotCapaJPG.jpg",
+      "backdrop_path": "/midia/ChatBotBanner.png",
       "genres": [
-        "Front-End",
-        "JavaScript"
+        "Front-end",
+        "IA"
+      ],
+      "warning": ""
+    },
+    {
+      "id": 2,
+      "title": "Netflix Landing Page",
+      "overview": "Réplica da interface da Netflix feita em React.js para fins de aprendizado. Por meio deste projeto foi desenvolvido a sua variação que se tornou este portfólio atual",
+      "release_date": "2024-08-20",
+      "vote_average": 5,
+      "link": "https://netflix-beryl-beta.vercel.app/",
+      "poster_path": "/midia/NetflixCapa.png",
+      "backdrop_path": "/midia/NetflixBanner.png",
+      "genres": [
+        "Front-end",
+        "Javascript",
+        "React"
       ],
       "warning": ""
     },
@@ -91,37 +137,6 @@
         "CSS"
       ],
       "warning": "Este projeto foi desenvolvido para uso em computadores."
-    },
-    {
-      "id": 2,
-      "title": "Netflix Landing Page",
-      "overview": "Réplica da interface da Netflix feita em React.js para fins de aprendizado. Por meio deste projeto foi desenvolvido a sua variação que se tornou este portfólio atual",
-      "release_date": "2024-08-20",
-      "vote_average": 5,
-      "link": "https://netflix-beryl-beta.vercel.app/",
-      "poster_path": "/midia/NetflixCapa.png",
-      "backdrop_path": "/midia/NetflixBanner.png",
-      "genres": [
-        "Front-end",
-        "Javascript",
-        "React"
-      ],
-      "warning": ""
-    },
-    {
-      "id": 3,
-      "title": "ChatBot Impacta",
-      "overview": "ChatBot simples consumindo uma API de LLM.",
-      "release_date": "2025-01-15",
-      "vote_average": 5,
-      "link": "https://chatbot-faculdade-impacta-hpxy.vercel.app/",
-      "poster_path": "/midia/ChatbotCapaJPG.jpg",
-      "backdrop_path": "/midia/ChatBotBanner.png",
-      "genres": [
-        "Front-end",
-        "IA"
-      ],
-      "warning": ""
     },
     {
       "id": 5,
@@ -186,6 +201,21 @@
   ],
   "Javascript": [
     {
+      "id": 16,
+      "title": "Prisma",
+      "overview": "Aplicativo para criar relatórios editáveis de Meta Ads com um editor visual de blocos. Reúne indicadores, gráficos, tabelas e análises em documentos personalizáveis, com organização por clientes, importação de dados CSV/XLSX, modelos para leads, vendas e visão executiva e exportação em PDF.",
+      "release_date": "",
+      "link": "https://prisma-olive-two.vercel.app/",
+      "poster_path": "/midia/Prisma-2026-10-19.png",
+      "backdrop_path": "/midia/Prisma-2026-10-19.png",
+      "genres": [
+        "Meta Ads",
+        "Relatórios",
+        "JavaScript"
+      ],
+      "warning": ""
+    },
+    {
       "id": 3,
       "title": "ChatBot Impacta",
       "overview": "ChatBot simples consumindo uma API de LLM.",
@@ -197,21 +227,6 @@
       "genres": [
         "Front-end",
         "IA"
-      ],
-      "warning": ""
-    },
-    {
-      "id": 12,
-      "title": "Evilasio Gouveia",
-      "overview": "Desenvolvi uma landing page para o autor Evilasio Gouveia, utilizando HTML, CSS e JavaScript, com foco em conversão e clareza de comunicação. O projeto apresenta o e-book O Caminho da Mente Equilibrada e Plena, organizando estrategicamente as seções de copy para destacar dores, benefícios, método, autoridade e oferta, conduzindo o público de forma clara até a ação de compra. A página foi construída com estrutura responsiva, visual organizado e alinhamento às boas práticas de UX e marketing digital.",
-      "release_date": "2026-03-13",
-      "vote_average": 8,
-      "link": "https://the-manna-method-trabalho-lucas.vercel.app/",
-      "poster_path": "/midia/PlenaLuzCapa.png",
-      "backdrop_path": "/midia/PlenaLuzBanner.png",
-      "genres": [
-        "Front-End",
-        "JavaScript"
       ],
       "warning": ""
     },
@@ -386,12 +401,12 @@
     {
       "id": 15,
       "title": "Tomorrow - Planner",
-      "overview": "Planner de tarefas completo criado em JavaScript, com gerador de tarefas e tabelas com Gameficação e sistema de progresso.",
+      "overview": "Aplicativo de organização pessoal e projetos com tarefas, quadros, calendário, cadernos e lembretes. Oferece modelos de planejamento semanal, projetos Kanban e estudos, reunindo diferentes formas de organizar a rotina em uma interface integrada.",
       "release_date": "2025-11-16",
       "vote_average": 9,
       "link": "https://tomorrow-planner.vercel.app/",
-      "poster_path": "/midia/TomorrowCapa.png",
-      "backdrop_path": "/midia/TomorrowBanner.png",
+      "poster_path": "/midia/Tomorrow-2026-10-19.png",
+      "backdrop_path": "/midia/Tomorrow-2026-10-19.png",
       "genres": [
         "Front-end",
         "Javascript"
@@ -434,21 +449,6 @@
     }
   ],
   "Profissional - Desenvolvimento Web": [
-    {
-      "id": 12,
-      "title": "Evilasio Gouveia",
-      "overview": "Desenvolvi uma landing page para o autor Evilasio Gouveia, utilizando HTML, CSS e JavaScript, com foco em conversão e clareza de comunicação. O projeto apresenta o e-book O Caminho da Mente Equilibrada e Plena, organizando estrategicamente as seções de copy para destacar dores, benefícios, método, autoridade e oferta, conduzindo o público de forma clara até a ação de compra. A página foi construída com estrutura responsiva, visual organizado e alinhamento às boas práticas de UX e marketing digital.",
-      "release_date": "2026-03-13",
-      "vote_average": 8,
-      "link": "menteequilibradaeplena.opoderdopensamento.com",
-      "poster_path": "/midia/PlenaLuzCapa.png",
-      "backdrop_path": "/midia/PlenaLuzBanner.png",
-      "genres": [
-        "Front-End",
-        "JavaScript"
-      ],
-      "warning": ""
-    },
     {
       "id": 11,
       "title": "The Manna Method",

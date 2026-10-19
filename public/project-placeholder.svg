@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600">
+  <rect width="400" height="600" fill="#1b1c20"/>
+  <path d="m165 265-35 35 35 35m70-70 35 35-35 35m-22-88-26 106" fill="none" stroke="#149cff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="200" y="402" fill="#b9bcc5" font-family="Arial,sans-serif" font-size="24" text-anchor="middle">CODEFLIX</text>
+</svg>

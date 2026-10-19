@@ -1,31 +1,113 @@
-header{
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    right: 0;
-    left: 0;
-    height: 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 30px;
-    background: transparent;
-    transition: all ease 0.5s;
-}
-header.black{
-    background-color: #141414;
-}
-.header--logo{
-    height: 45px;
-}
-.header--logo img{
-    height: 100%;
-}
-.header--user{
-    height: 35px;
+.site-header {
+  position: fixed;
+  z-index: 100;
+  inset: 0 0 auto;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-inline: var(--gutter);
+  background: linear-gradient(#141414 0%, #141414eb 65%, #14141400);
+  transition: background-color 180ms ease;
 }
 
-.header--user img{
-    height: 100%;
-    border-radius: 3px;
+.site-header.black {
+  background-color: var(--background);
+}
+
+.header--logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.header--logo img {
+  display: block;
+  width: clamp(148px, 14vw, 176px);
+  height: auto;
+}
+
+.header--nav {
+  display: flex;
+  gap: 4px;
+}
+
+.header--nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  color: #d1d1d1;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.header--nav .header--home {
+  background: #ffffff1f;
+  color: white;
+}
+
+.header--nav a:hover {
+  background: #ffffff14;
+  color: white;
+}
+
+.header--user {
+  margin-left: auto;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 4px;
+  background: #087ce0;
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    gap: 12px;
+  }
+
+  .header--nav a {
+    padding-inline: 10px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header--logo img {
+    width: 144px;
+  }
+
+  .header--nav {
+    margin-left: auto;
+    gap: 0;
+  }
+
+  .header--nav a {
+    padding-inline: 8px;
+    font-size: 12px;
+  }
+
+  .header--nav .header--home,
+  .header--nav .header--about,
+  .header--user {
+    display: none;
+  }
+}
+
+@media (max-width: 359px) {
+  .header--logo img {
+    width: 124px;
+  }
+
+  .header--nav a {
+    padding-inline: 6px;
+  }
 }

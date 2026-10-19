@@ -1,73 +1,41 @@
 import React from 'react';
+import Icon from './Icon';
+import { getProjectTitle, getProjectGenres, getProjectYear, resolveAsset, resolveProjectLink, handleImageError } from '../projectUtils';
 import './FeaturedMovie.css';
 
-export default function FeaturedMovie({ item = {}, onOpenModal }) {
-  const title =
-    item.original_name || item.name || item.original_title || item.title || 'Sem título';
-
-  const dateStr = item.first_air_date || item.release_date || '';
-  const firstDate = dateStr ? new Date(dateStr) : null;
-  const year = firstDate ? firstDate.getFullYear() : '—';
-
-  const genresList = Array.isArray(item.genres)
-    ? item.genres.map(g => (typeof g === 'string' ? g : g?.name)).filter(Boolean)
-    : [];
-  const genres = genresList.join(', ');
-
-  let description = item.overview || '';
-  if (description.length > 200) description = description.substring(0, 200) + '...';
-
-  const points = typeof item.vote_average === 'number' ? item.vote_average : '—';
-  const seasons = typeof item.number_of_seasons === 'number' ? item.number_of_seasons : null;
-
-  const resolveBackdrop = (backdrop_path) => {
-  if (!backdrop_path) return undefined;
-
-  // Se for imagem local do public/
-  if (backdrop_path.startsWith('/')) return process.env.PUBLIC_URL + backdrop_path;
-
-  // Caminho relativo (sem http)
-  if (!backdrop_path.startsWith('http')) return process.env.PUBLIC_URL + '/' + backdrop_path;
-
-  // URL externa completa
-  return backdrop_path;
-};
-
-  const backdropUrl = resolveBackdrop(item.backdrop_path);
+export default function FeaturedMovie({ item, onOpenModal }) {
+  const title = getProjectTitle(item);
+  const genres = getProjectGenres(item);
+  const year = getProjectYear(item);
+  const link = resolveProjectLink(item.link);
 
   return (
-    <section
-      className="featured"
-      style={{
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        ...(backdropUrl ? { backgroundImage: `url(${backdropUrl})` } : {})
-      }}
-    >
-      <div className="featured--vertical">
-        <div className="featured--horizontal">
-          <div className="featured--name">{title}</div>
-
-          <div className="featured--info">
-            <div className="featured--points">{points} pontos</div>
-            <div className="featured--year">{year}</div>
-            {seasons != null && (
-              <div className="featured--seasons">
-                {seasons} temporada{seasons !== 1 ? 's' : ''}
-              </div>
-            )}
-          </div>
-
-          <div className="featured--description">{description}</div>
-
-          <div className="featured--buttons">
-            <a href={`${item.link}`} target="_blank" className="featured--watchbutton"> ▶ Abrir Projeto </a>
-            <a className="featured--mylistbutton" onClick={() => onOpenModal(item)}>✚ Mais detalhes </a>
-          </div>
-
-          {genres && (
-            <div className="featured--genres"><strong>Gêneros: </strong>{genres}</div>
+    <section className="featured" aria-labelledby="featured-title">
+      <img
+        className="featured--backdrop"
+        src={resolveAsset(item.backdrop_path || item.poster_path)}
+        onError={handleImageError}
+        alt=""
+        fetchPriority="high"
+      />
+      <div className="featured--content">
+        <p className="featured--kicker">Projeto em destaque</p>
+        <h1 className="featured--name" id="featured-title">{title}</h1>
+        <div className="featured--info">
+          <span>Projeto</span>
+          {genres.slice(0, 2).map(genre => <span key={genre}>{genre}</span>)}
+          {year && <span>{year}</span>}
+        </div>
+        <p className="featured--description">{item.overview}</p>
+        <div className="featured--buttons">
+          {link && (
+            <a href={link} target="_blank" rel="noopener noreferrer" className="button button--primary">
+              <Icon name="play" />Abrir projeto<span className="sr-only"> (nova aba)</span>
+            </a>
           )}
+          <button type="button" className="button button--secondary" onClick={onOpenModal} aria-haspopup="dialog">
+            <Icon name="info" />Mais detalhes
+          </button>
         </div>
       </div>
     </section>
