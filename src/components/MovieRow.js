@@ -33,7 +33,7 @@ export default function MovieRow({ title, items, onSelect }) {
     const list = listRef.current;
     if (list) list.scrollBy({
       left: direction * list.clientWidth * 0.8,
-      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches || document.documentElement.dataset.reduceMotion === 'true' ? 'instant' : 'smooth',
     });
   }
 

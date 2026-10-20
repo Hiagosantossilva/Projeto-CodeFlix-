@@ -7,6 +7,8 @@ const paths = {
   right: 'm10 6 6 6-6 6',
   close: 'm6 6 12 12M6 18 18 6',
   external: 'M14 3h7v7m0-7L10 14M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5',
+  download: 'M12 3v12m-5-5 5 5 5-5M4 16v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4',
+  check: 'm5 12 4 4L19 6',
 };
 
 export default function Icon({ name }) {

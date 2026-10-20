@@ -32,6 +32,8 @@ A saída fica em `build/`.
 
 Para cadastrar um projeto, inclua seu registro nas categorias desejadas e suas imagens em `public/midia/`. Use endereços completos com `https://` e um ID exclusivo. Há IDs repetidos nos registros antigos; a seleção usa o registro do card, e as chaves da interface combinam título e capa para evitar trocas entre projetos. Repetições da mesma capa e título dentro de uma categoria são exibidas uma única vez.
 
+O catálogo está organizado em Principais projetos, Aplicativos e produtividade, Sites e páginas web, Estudos de front-end e Jogos. Os cinco principais, nesta ordem, são Meu portfólio, Tomorrow, Prisma, TimeShift institucional e Escape From. ChatBot Impacta permanece em Aplicativos e produtividade. Os demais projetos continuam nas fileiras temáticas. Meu portfólio, Tomorrow e Prisma têm o ano informado de 2026, sem atribuir dia ou mês. A capa do portfólio é uma captura real de sua página publicada em 20/10/2026.
+
 ## Revisão da interface — 17/10/2026
 
 Problemas identificados e corrigidos:
@@ -83,3 +85,11 @@ As logos originais fornecidas de Tomorrow e Prisma ficam em `public/midia/Tomorr
 Os campos opcionais `logo_path`, `brand_name`, `brand_caption`, `brand_color` e `logo_scale` controlam a apresentação pelo catálogo. Os prints originais são preservados, e o movimento ao passar o mouse respeita a preferência por movimento reduzido.
 
 Tomorrow e Prisma compartilham `suite_name: "My Workstation"`. O componente `SuiteBadge` identifica o pacote com um pequeno ícone de estrela nas capas e uma tag no destaque e nos detalhes.
+
+## Instalação e preferências
+
+O favicon e os ícones de instalação usam o símbolo de código do CodeFlix, em `public/codeflix-icon.svg` e `public/icons/`. O manifesto define a abertura como aplicativo. O botão ao lado do perfil usa o convite nativo de instalação quando o navegador o disponibiliza; nos demais casos, apresenta instruções para instalação pelo navegador. A instalação depende do suporte do navegador e de HTTPS em produção.
+
+O perfil contém atalhos para apresentação, portfólio completo e contato, além da opção de reduzir animações, salva em `localStorage`. A preferência de movimento reduzido do sistema também é respeitada.
+
+O service worker é registrado apenas na versão de produção. Ele guarda a interface e os recursos visitados para abertura offline; capas ainda não visitadas usam a imagem de reserva. Os projetos externos continuam exigindo conexão. Para validar localmente, sirva `build/` por HTTP após `npm run build`; `npm start` mantém o desenvolvimento sem cache do service worker.

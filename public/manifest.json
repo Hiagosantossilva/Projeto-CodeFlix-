@@ -1,15 +1,26 @@
 {
   "short_name": "CodeFlix",
-  "name": "CodeFlix Projects",
+  "name": "CodeFlix — Portfólio de Hiago Santos Silva",
+  "description": "Projetos, estudos e aplicações de desenvolvimento web, jogos e dados.",
+  "lang": "pt-BR",
+  "id": "./",
   "icons": [
     {
-      "src": "Logoicon.png",
+      "src": "icons/codeflix-192.png",
       "type": "image/png",
-      "sizes": "300x338"
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/codeflix-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
     }
   ],
-  "start_url": ".",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#141414",
+  "background_color": "#141414"
 }
