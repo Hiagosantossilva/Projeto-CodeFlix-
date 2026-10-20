@@ -57,6 +57,21 @@
       "suite_name": "My Workstation"
     },
     {
+      "id": 18,
+      "title": "Bio++ - Bio links e conversão",
+      "overview": "Plataforma de bio links e mini landing pages para profissionais de marketing, criadores e negócios. Permite montar páginas com editor visual de blocos, reordenar conteúdos por arrastar e soltar, personalizar a aparência e publicar com um link personalizado. Reúne perfil, botões de chamada para ação, textos, imagens e redes sociais, além de indicadores de visualizações, cliques e CTR para acompanhar resultados.",
+      "release_date": "",
+      "link": "https://bioplusplusapps.vercel.app/app",
+      "poster_path": "/midia/BioPlusPlus-2026-10-20.png",
+      "backdrop_path": "/midia/BioPlusPlus-2026-10-20.png",
+      "genres": [
+        "Marketing digital",
+        "Editor visual",
+        "Analytics"
+      ],
+      "warning": ""
+    },
+    {
       "id": 11,
       "title": "TimeShift - Site institucional",
       "overview": "Site oficial da agência Timeshift",
@@ -128,6 +143,21 @@
       "brand_caption": "Relatórios de Meta Ads",
       "brand_color": "#168bff",
       "suite_name": "My Workstation"
+    },
+    {
+      "id": 18,
+      "title": "Bio++ - Bio links e conversão",
+      "overview": "Plataforma de bio links e mini landing pages para profissionais de marketing, criadores e negócios. Permite montar páginas com editor visual de blocos, reordenar conteúdos por arrastar e soltar, personalizar a aparência e publicar com um link personalizado. Reúne perfil, botões de chamada para ação, textos, imagens e redes sociais, além de indicadores de visualizações, cliques e CTR para acompanhar resultados.",
+      "release_date": "",
+      "link": "https://bioplusplusapps.vercel.app/app",
+      "poster_path": "/midia/BioPlusPlus-2026-10-20.png",
+      "backdrop_path": "/midia/BioPlusPlus-2026-10-20.png",
+      "genres": [
+        "Marketing digital",
+        "Editor visual",
+        "Analytics"
+      ],
+      "warning": ""
     },
     {
       "id": 3,

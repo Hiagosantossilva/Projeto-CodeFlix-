@@ -32,7 +32,7 @@ A saída fica em `build/`.
 
 Para cadastrar um projeto, inclua seu registro nas categorias desejadas e suas imagens em `public/midia/`. Use endereços completos com `https://` e um ID exclusivo. Há IDs repetidos nos registros antigos; a seleção usa o registro do card, e as chaves da interface combinam título e capa para evitar trocas entre projetos. Repetições da mesma capa e título dentro de uma categoria são exibidas uma única vez.
 
-O catálogo está organizado em Principais projetos, Aplicativos e produtividade, Sites e páginas web, Estudos de front-end e Jogos. Os cinco principais, nesta ordem, são Meu portfólio, Tomorrow, Prisma, TimeShift institucional e Escape From. ChatBot Impacta permanece em Aplicativos e produtividade. Os demais projetos continuam nas fileiras temáticas. Meu portfólio, Tomorrow e Prisma têm o ano informado de 2026, sem atribuir dia ou mês. A capa do portfólio é uma captura real de sua página publicada em 20/10/2026.
+O catálogo está organizado em Principais projetos, Aplicativos e produtividade, Sites e páginas web, Estudos de front-end e Jogos. Os seis principais, nesta ordem, são Meu portfólio, Tomorrow, Prisma, Bio++, TimeShift institucional e Escape From. ChatBot Impacta permanece em Aplicativos e produtividade. Os demais projetos continuam nas fileiras temáticas. Meu portfólio, Tomorrow e Prisma têm o ano informado de 2026, sem atribuir dia ou mês. A capa do portfólio é uma captura real de sua página publicada em 20/10/2026.
 
 ## Revisão da interface — 17/10/2026
 
@@ -77,6 +77,8 @@ Essas verificações de navegador foram executadas durante a revisão; não há 
 - Prisma: captura do editor de documento local de [prisma-olive-two.vercel.app](https://prisma-olive-two.vercel.app/), com biblioteca de blocos e configurações do relatório. O documento está sem fonte de dados vinculada; a imagem não representa resultados de campanhas reais. Imagem: `public/midia/Prisma-2026-10-19.png`.
 
 São prints reais do navegador em 1600×900, usados como capa e banner. Os nomes incluem a data da captura para evitar o reaproveitamento de imagens antigas em cache. Tomorrow foi atualizado nas duas categorias em que aparece; Prisma foi incluído em Principais projetos e JavaScript. As descrições foram baseadas nas telas e nos recursos apresentados pelas versões publicadas.
+
+Bio++ foi adicionado em 20/10/2026, em Principais projetos e Aplicativos e produtividade. Sua capa e banner usam `public/midia/BioPlusPlus-2026-10-20.png`, captura real do editor em 1920×1080 no acesso demonstrativo oferecido pelo app. A descrição foi baseada no editor e no painel de analytics, com widgets, personalização, publicação por link e indicadores de visualizações, cliques e CTR. O ano de lançamento não foi informado. O destino permanece [bioplusplusapps.vercel.app/app](https://bioplusplusapps.vercel.app/app), que apresenta a tela de acesso para visitantes sem sessão.
 
 ### Logos nas capas
 
