@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect, useId } from 'react';
 import Icon from './Icon';
 import ProjectBrand from './ProjectBrand';
 import SuiteBadge from './SuiteBadge';
-import { getProjectTitle, resolveAsset, handleImageError } from '../projectUtils';
+import { getProjectTitle, getProjectGallery, resolveAsset, handleImageError } from '../projectUtils';
 import './MovieRow.css';
 
 export default function MovieRow({ title, items, onSelect }) {
@@ -59,14 +59,17 @@ export default function MovieRow({ title, items, onSelect }) {
         <ul className="movieRow--list" ref={listRef} id={listId} tabIndex={0} aria-label={`Projetos de ${title}`}>
           {results.map(item => {
             const projectTitle = getProjectTitle(item);
+            const gallery = getProjectGallery(item);
+            const isGallery = gallery.length > 0;
             return (
               <li className="movieRow--item" key={`${projectTitle}-${item.poster_path}`}>
-                <button type="button" className="project-card" onClick={() => onSelect(item)} aria-label={`Ver detalhes de ${projectTitle}${item.suite_name ? `. Pacote ${item.suite_name}` : ''}`} aria-haspopup="dialog">
+                <button type="button" className="project-card" onClick={() => onSelect(item)} aria-label={`${isGallery ? 'Ver galeria' : 'Ver detalhes'} de ${projectTitle}${item.suite_name ? `. Pacote ${item.suite_name}` : ''}`} aria-haspopup="dialog">
                   <span className={`project-card--cover${item.logo_path ? ' project-card--cover-branded' : ''}`}>
                     <img src={resolveAsset(item.backdrop_path || item.poster_path)} alt="" loading="lazy" decoding="async" onError={handleImageError} />
                     <ProjectBrand item={item} />
                     <SuiteBadge item={item} variant="cover" />
-                    <span className="project-card--overlay"><Icon name="info" /></span>
+                    {isGallery && <span className="project-card--gallery-label"><Icon name="gallery" />Galeria · {gallery.length} prints</span>}
+                    <span className="project-card--overlay"><Icon name={isGallery ? 'gallery' : 'info'} /></span>
                   </span>
                   <span className="project-card--title">{projectTitle}</span>
                 </button>

@@ -2,6 +2,21 @@ export function getProjectTitle(item) {
   return item.title || item.name || item.original_name || item.original_title || 'Projeto sem título';
 }
 
+export function getProjectGallery(item) {
+  return Array.isArray(item.gallery)
+    ? item.gallery.filter(image => image && typeof image.src === 'string' && image.src.trim())
+    : [];
+}
+
+export function getProjectTypeLabel(item) {
+  return item.project_type === 'professional' ? 'Projeto profissional' : 'Projeto';
+}
+
+export function getProjectLink(item) {
+  if (item.presentation === 'gallery' || getProjectGallery(item).length > 0) return null;
+  return resolveProjectLink(item.link);
+}
+
 export function getProjectGenres(item) {
   const labels = { Javascript: 'JavaScript', 'Front-End': 'Front-end', Wordpress: 'WordPress' };
   return (Array.isArray(item.genres) ? item.genres : [])

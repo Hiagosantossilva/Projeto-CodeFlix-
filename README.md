@@ -32,7 +32,15 @@ A saída fica em `build/`.
 
 Para cadastrar um projeto, inclua seu registro nas categorias desejadas e suas imagens em `public/midia/`. Use endereços completos com `https://` e um ID exclusivo. Há IDs repetidos nos registros antigos; a seleção usa o registro do card, e as chaves da interface combinam título e capa para evitar trocas entre projetos. Repetições da mesma capa e título dentro de uma categoria são exibidas uma única vez.
 
-O catálogo está organizado em Principais projetos, Aplicativos e produtividade, Sites e páginas web, Estudos de front-end e Jogos. Os seis principais, nesta ordem, são Meu portfólio, Tomorrow, Prisma, Bio++, TimeShift institucional e Escape From. ChatBot Impacta permanece em Aplicativos e produtividade. Os demais projetos continuam nas fileiras temáticas. Meu portfólio, Tomorrow e Prisma têm o ano informado de 2026, sem atribuir dia ou mês. A capa do portfólio é uma captura real de sua página publicada em 20/10/2026.
+O catálogo está organizado em Principais projetos, Projetos profissionais, Aplicativos e produtividade, Sites e páginas web, Estudos de front-end e Jogos. Os oito principais, nesta ordem, são Meu portfólio, Tomorrow, Prisma, Bio++, Ara English, Atlas Harmônico, TimeShift institucional e Escape From. ChatBot Impacta permanece em Aplicativos e produtividade. Os demais projetos continuam nas fileiras temáticas. Meu portfólio, Tomorrow e Prisma têm o ano informado de 2026, sem atribuir dia ou mês. A capa do portfólio é uma captura real de sua página publicada em 20/10/2026.
+
+### Galerias de projetos profissionais
+
+Chord Upgrade, Autobase e FactoryShop são projetos profissionais reais de 2026, conforme informado pelo autor. Ficam na fileira Projetos profissionais, após os destaques, com quatro, quatro e três capturas, respectivamente. As imagens ficam em `public/midia/galerias/` e mostram navegação, biblioteca, prática musical, IA automotiva, gestão da oficina, consulta de veículos, documentos e catálogo por fabricante. As capturas do navegador têm 1600×900; a terceira imagem do FactoryShop foi substituída pelo print original fornecido pelo autor, preservando sua resolução. Os estados vazios são os apresentados pelos apps na sessão de captura.
+
+Esses registros usam `presentation: "gallery"`, `project_type: "professional"` e uma lista `gallery` de objetos com `src`, `caption` e `alt`. Não contêm campo `link`. `getProjectLink` também bloqueia links em projetos de galeria caso esse campo seja adicionado no futuro. `ProjectGallery` apresenta os prints sem cortes, com legendas, miniaturas, setas e navegação por teclado, dentro do modal. Os demais projetos mantêm seu acesso externo.
+
+As páginas de origem foram usadas para analisar os recursos e fazer as capturas. O catálogo FactoryShop corresponde ao endereço raiz informado; o Autobase corresponde a `/chat/`. Os endereços desses três projetos não são expostos na interface ou nos registros do catálogo.
 
 ## Revisão da interface — 17/10/2026
 
@@ -79,6 +87,10 @@ Essas verificações de navegador foram executadas durante a revisão; não há 
 São prints reais do navegador em 1600×900, usados como capa e banner. Os nomes incluem a data da captura para evitar o reaproveitamento de imagens antigas em cache. Tomorrow foi atualizado nas duas categorias em que aparece; Prisma foi incluído em Principais projetos e JavaScript. As descrições foram baseadas nas telas e nos recursos apresentados pelas versões publicadas.
 
 Bio++ foi adicionado em 20/10/2026, em Principais projetos e Aplicativos e produtividade. Sua capa e banner usam `public/midia/BioPlusPlus-2026-10-20.png`, captura real do editor em 1920×1080 no acesso demonstrativo oferecido pelo app. A descrição foi baseada no editor e no painel de analytics, com widgets, personalização, publicação por link e indicadores de visualizações, cliques e CTR. O ano de lançamento não foi informado. O destino permanece [bioplusplusapps.vercel.app/app](https://bioplusplusapps.vercel.app/app), que apresenta a tela de acesso para visitantes sem sessão.
+
+Ara English foi adicionado em 20/10/2026, em Principais projetos e Aplicativos e produtividade. A capa e o banner usam `public/midia/AraEnglish-2026-10-20.png`, captura real da tela de boas-vindas em 1920×1080, com viewport de 960×540 e escala de pixels 2. A descrição usa as informações apresentadas pelo app e pelo fluxo inicial: unidades de gramática, exercícios, revisão espaçada, objetivos, metas diárias e avaliação inicial de nível. O ano de lançamento não foi informado. O destino é [ara-english-server-delta.vercel.app/nivel](https://ara-english-server-delta.vercel.app/nivel); no primeiro acesso, o app solicita um apelido e as preferências de estudo antes da avaliação.
+
+Atlas Harmônico foi adicionado em 20/10/2026, em Principais projetos e Aplicativos e produtividade, e também integra Projetos profissionais, após Chord Upgrade. Foi identificado pelo autor como projeto profissional e mantém o acesso direto ao site. A capa e o banner usam `public/midia/AtlasHarmonico-arte-2026-10-20.png`, print da página inicial no tema escuro fornecido pelo autor, preservado em sua resolução original. A descrição foi baseada na biblioteca de 708 voicings, nos filtros e na ficha detalhada. O destino é [palegreen-shark-460053.hostingersite.com](https://palegreen-shark-460053.hostingersite.com/). O ano de lançamento não foi informado.
 
 ### Logos nas capas
 

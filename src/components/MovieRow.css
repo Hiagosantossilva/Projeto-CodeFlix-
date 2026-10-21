@@ -148,6 +148,9 @@
   height: 27px;
 }
 
+.project-card--gallery-label { position: absolute; left: 10px; bottom: 10px; z-index: 1; display: inline-flex; align-items: center; gap: 5px; padding: 4px 7px; border-radius: 4px; background: #101010e6; color: #eee; font-size: 10px; line-height: 1.4; pointer-events: none; }
+.project-card--gallery-label svg { width: 13px; height: 13px; }
+
 .project-card--title {
   display: block;
   overflow: hidden;

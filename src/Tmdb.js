@@ -2,6 +2,7 @@ import local from './data/codeflix-local.json';
 
 const categoryTitles = {
   principais: 'Principais projetos',
+  profissionais: 'Projetos profissionais',
   aplicativos: 'Aplicativos e produtividade',
   sites: 'Sites e páginas web',
   estudos: 'Estudos de front-end',

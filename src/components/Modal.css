@@ -17,6 +17,8 @@
   display: none;
 }
 
+.modal-container--gallery { width: min(1040px, calc(100% - 48px)); }
+
 .modal-container[open] {
   animation: modal-in 180ms ease-out;
 }

@@ -2,7 +2,8 @@ import React, { useEffect, useRef, useId } from 'react';
 import Icon from './Icon';
 import ProjectBrand from './ProjectBrand';
 import SuiteBadge from './SuiteBadge';
-import { getProjectTitle, getProjectGenres, getProjectYear, resolveAsset, resolveProjectLink, handleImageError } from '../projectUtils';
+import ProjectGallery from './ProjectGallery';
+import { getProjectTitle, getProjectGenres, getProjectYear, getProjectGallery, getProjectLink, getProjectTypeLabel, resolveAsset, handleImageError } from '../projectUtils';
 import './Modal.css';
 
 export default function Modal({ item, onClose }) {
@@ -11,7 +12,8 @@ export default function Modal({ item, onClose }) {
   const title = getProjectTitle(item);
   const genres = getProjectGenres(item);
   const year = getProjectYear(item);
-  const link = resolveProjectLink(item.link);
+  const gallery = getProjectGallery(item);
+  const link = getProjectLink(item);
 
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -58,7 +60,7 @@ export default function Modal({ item, onClose }) {
   return (
     <dialog
       ref={dialogRef}
-      className="modal-container"
+      className={`modal-container${gallery.length ? ' modal-container--gallery' : ''}`}
       aria-labelledby={titleId}
       onClick={handleBackdropClick}
       onCancel={handleCancel}
@@ -69,7 +71,7 @@ export default function Modal({ item, onClose }) {
           <Icon name="close" />
         </button>
       </div>
-      <div className="modal-hero">
+      {gallery.length ? <ProjectGallery key={title} title={title} titleId={titleId} images={gallery} /> : <div className="modal-hero">
         <SuiteBadge item={item} variant="cover" />
         <img
           src={resolveAsset(item.backdrop_path || item.poster_path)}
@@ -86,10 +88,10 @@ export default function Modal({ item, onClose }) {
             </a>
           )}
         </div>
-      </div>
+      </div>}
       <div className={`modal-content${genres.length || item.suite_name ? '' : ' modal-content--single'}`}>
         <div className="modal-summary">
-          <p className="modal-meta">{year && <span>{year}</span>}<span>Projeto</span></p>
+          <p className="modal-meta">{year && <span>{year}</span>}<span>{getProjectTypeLabel(item)}</span></p>
           {item.warning && (
             <p className="modal-warning"><Icon name="info" /><span>{item.warning}</span></p>
           )}

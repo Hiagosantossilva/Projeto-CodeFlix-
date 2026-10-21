@@ -1,0 +1,29 @@
+.project-gallery { min-width: 0; padding-bottom: 24px; }
+.project-gallery--heading { padding: 28px 76px 24px 40px; }
+.project-gallery--heading p { margin: 0 0 8px; color: #aaa; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+.project-gallery--heading h2 { margin: 0; font-size: clamp(24px, 3vw, 34px); line-height: 1.2; letter-spacing: -.025em; overflow-wrap: anywhere; }
+.project-gallery--figure { margin: 0; }
+.project-gallery--stage { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #0b0b0b; }
+.project-gallery--stage > img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.project-gallery--stage:focus-visible { outline-offset: -3px; }
+.project-gallery--arrow { position: absolute; top: 50%; transform: translateY(-50%); display: grid; place-items: center; width: 44px; height: 56px; padding: 0; border: 1px solid #ffffff26; border-radius: 999px; background: #141414d9; color: white; }
+.project-gallery--previous { left: 12px; }
+.project-gallery--next { right: 12px; }
+.project-gallery--arrow:hover { background: #363636; }
+.project-gallery--caption { display: flex; justify-content: space-between; gap: 16px; padding: 14px 40px; color: #ddd; font-size: 13px; line-height: 1.5; }
+.project-gallery--count { flex-shrink: 0; color: #aaa; font-variant-numeric: tabular-nums; }
+.project-gallery--thumbnails { position: relative; display: flex; gap: 8px; overflow-x: auto; padding: 4px 40px; scroll-padding-inline: 40px; scrollbar-width: none; }
+.project-gallery--thumbnails::-webkit-scrollbar { display: none; }
+.project-gallery--thumbnails button { flex: 0 0 112px; padding: 3px; border: 2px solid transparent; border-radius: 5px; background: transparent; opacity: .6; }
+.project-gallery--thumbnails button[aria-pressed="true"] { border-color: #f5f5f1; opacity: 1; }
+.project-gallery--thumbnails button:hover { opacity: 1; }
+.project-gallery--thumbnails img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: contain; border-radius: 2px; background: #0b0b0b; }
+@media (max-width: 600px) {
+  .project-gallery--heading { padding: 24px 64px 20px 24px; }
+  .project-gallery--caption { padding: 12px 24px; font-size: 12px; }
+  .project-gallery--thumbnails { padding-inline: 24px; scroll-padding-inline: 24px; }
+  .project-gallery--thumbnails button { flex-basis: 84px; }
+  .project-gallery--arrow { width: 40px; height: 44px; }
+  .project-gallery--previous { left: 6px; }
+  .project-gallery--next { right: 6px; }
+}

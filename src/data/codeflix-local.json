@@ -72,6 +72,37 @@
       "warning": ""
     },
     {
+      "id": 19,
+      "title": "Ara English - Estudo de inglês",
+      "overview": "Aplicativo de estudo de inglês com lições de gramática, exercícios corrigidos e revisão espaçada. Organiza o aprendizado em 115 unidades baseadas nos tópicos de Essential Grammar in Use. Inclui um teste de nível para sugerir por onde começar e permite definir objetivos de aprendizagem e metas diárias de questões, apoiando uma rotina de prática progressiva.",
+      "release_date": "",
+      "link": "https://ara-english-server-delta.vercel.app/nivel",
+      "poster_path": "/midia/AraEnglish-2026-10-20.png",
+      "backdrop_path": "/midia/AraEnglish-2026-10-20.png",
+      "genres": [
+        "Educação",
+        "Inglês",
+        "Gramática"
+      ],
+      "warning": ""
+    },
+    {
+      "id": 20,
+      "title": "Atlas Harmônico - Acordes de piano",
+      "overview": "Biblioteca interativa de acordes para piano, com 708 voicings organizados por tonalidade, família e capítulo. Permite pesquisar por cifra, nota ou fórmula, visualizar a distribuição das notas entre as duas mãos e consultar graus, oitavas e nível de dificuldade. Inclui reprodução de acordes e arpejos, prática separada por mão e favoritos para organizar o estudo.",
+      "release_date": "",
+      "link": "https://palegreen-shark-460053.hostingersite.com/",
+      "poster_path": "/midia/AtlasHarmonico-arte-2026-10-20.png",
+      "backdrop_path": "/midia/AtlasHarmonico-arte-2026-10-20.png",
+      "genres": [
+        "Música",
+        "Piano",
+        "Educação"
+      ],
+      "warning": "",
+      "project_type": "professional"
+    },
+    {
       "id": 11,
       "title": "TimeShift - Site institucional",
       "overview": "Site oficial da agência Timeshift",
@@ -84,7 +115,8 @@
         "Front-end",
         "Wordpress"
       ],
-      "warning": ""
+      "warning": "",
+      "project_type": "professional"
     },
     {
       "id": 9,
@@ -100,6 +132,149 @@
         "Construct"
       ],
       "warning": "Este projeto foi desenvolvido para uso em computadores."
+    }
+  ],
+  "profissionais": [
+    {
+      "id": 21,
+      "title": "Chord Upgrade - Acordes de violão",
+      "overview": "Plataforma profissional para estudo de acordes de violão, com biblioteca organizada por tonalidade e campo harmônico. Reúne diagramas, variações, reprodução sonora, favoritos, conjuntos de acordes, acompanhamento de progresso e modos de prática. Inclui um catálogo de progressões musicais e interface em vários idiomas.",
+      "genres": [
+        "Educação musical",
+        "Violão",
+        "Produto digital"
+      ],
+      "gallery": [
+        {
+          "src": "/midia/galerias/ChordUpgrade-01-inicio.png",
+          "caption": "Página inicial e atalhos de estudo",
+          "alt": "Página inicial do Chord Upgrade, com biblioteca por tonalidade e acompanhamento de progresso."
+        },
+        {
+          "src": "/midia/galerias/ChordUpgrade-02-biblioteca.png",
+          "caption": "Biblioteca de acordes e variações em C",
+          "alt": "Diagramas de acordes de violão, variações e filtros por grau do campo harmônico."
+        },
+        {
+          "src": "/midia/galerias/ChordUpgrade-03-pratica.png",
+          "caption": "Modos de prática e treino de acordes",
+          "alt": "Painel com prática diária, treino de acordes, trocas e progressões."
+        },
+        {
+          "src": "/midia/galerias/ChordUpgrade-04-progressoes.png",
+          "caption": "Progression Playbook",
+          "alt": "Catálogo de progressões musicais com filtros por estilo."
+        }
+      ],
+      "release_date": "2026",
+      "project_type": "professional",
+      "presentation": "gallery",
+      "poster_path": "/midia/galerias/ChordUpgrade-01-inicio.png",
+      "backdrop_path": "/midia/galerias/ChordUpgrade-01-inicio.png",
+      "warning": ""
+    },
+    {
+      "id": 20,
+      "title": "Atlas Harmônico - Acordes de piano",
+      "overview": "Biblioteca interativa de acordes para piano, com 708 voicings organizados por tonalidade, família e capítulo. Permite pesquisar por cifra, nota ou fórmula, visualizar a distribuição das notas entre as duas mãos e consultar graus, oitavas e nível de dificuldade. Inclui reprodução de acordes e arpejos, prática separada por mão e favoritos para organizar o estudo.",
+      "release_date": "",
+      "link": "https://palegreen-shark-460053.hostingersite.com/",
+      "poster_path": "/midia/AtlasHarmonico-arte-2026-10-20.png",
+      "backdrop_path": "/midia/AtlasHarmonico-arte-2026-10-20.png",
+      "genres": [
+        "Música",
+        "Piano",
+        "Educação"
+      ],
+      "warning": "",
+      "project_type": "professional"
+    },
+    {
+      "id": 22,
+      "title": "Autobase - IA e gestão automotiva",
+      "overview": "Plataforma automotiva com assistente de IA, busca de manuais por veículo e ferramentas para organização da oficina. A interface reúne consulta por marca, modelo, ano ou VIN, biblioteca técnica, códigos de falha, recalls, câmbios e garagem. O módulo de gestão organiza clientes, veículos, atendimentos, orçamentos e agenda.",
+      "genres": [
+        "IA",
+        "Setor automotivo",
+        "Gestão"
+      ],
+      "gallery": [
+        {
+          "src": "/midia/galerias/Autobase-01-inicio.png",
+          "caption": "Serviços e navegação do Autobase",
+          "alt": "Página inicial do Autobase, com acesso à IA, consulta de veículos, manuais e gestão da oficina."
+        },
+        {
+          "src": "/midia/galerias/Autobase-02-ia.png",
+          "caption": "Assistente de IA automotiva",
+          "alt": "Tela inicial do assistente, com sugestões de consultas e campo de mensagem, sem conversas cadastradas."
+        },
+        {
+          "src": "/midia/galerias/Autobase-03-gestao.png",
+          "caption": "Gestão da oficina",
+          "alt": "Módulo de gestão com abas para atendimentos, clientes, veículos, orçamentos e agenda, sem registros cadastrados."
+        },
+        {
+          "src": "/midia/galerias/Autobase-04-veiculos.png",
+          "caption": "Consulta de veículos e marcas",
+          "alt": "Consulta por marca, modelo, ano ou VIN, com navegação visual por fabricantes."
+        }
+      ],
+      "release_date": "2026",
+      "project_type": "professional",
+      "presentation": "gallery",
+      "poster_path": "/midia/galerias/Autobase-01-inicio.png",
+      "backdrop_path": "/midia/galerias/Autobase-01-inicio.png",
+      "warning": ""
+    },
+    {
+      "id": 23,
+      "title": "FactoryShop - Manuais automotivos",
+      "overview": "Catálogo profissional de manuais automotivos, com pesquisa por marca, categoria, modelo e ano. Organiza documentos técnicos, diagramas elétricos e coleções especializadas, com páginas por veículo e acesso a arquivos para consulta e download. A experiência inclui busca textual, navegação por fabricantes e seleção dos documentos disponíveis para cada veículo.",
+      "genres": [
+        "Manuais automotivos",
+        "Catálogo digital",
+        "Desenvolvimento web"
+      ],
+      "gallery": [
+        {
+          "src": "/midia/galerias/FactoryShop-01-inicio.png",
+          "caption": "Busca e catálogo de manuais",
+          "alt": "Página inicial do FactoryShop, com pesquisa e seleção por marca, modelo e ano."
+        },
+        {
+          "src": "/midia/galerias/FactoryShop-02-documentos.png",
+          "caption": "Documentos por veículo e ano",
+          "alt": "Página de documentos da Ford Ranger 2008, com manual e outros intervalos disponíveis."
+        },
+        {
+          "src": "/midia/galerias/FactoryShop-03-catalogo.png",
+          "caption": "Catálogo por fabricante: Ford e Chevrolet",
+          "alt": "Catálogo do FactoryShop com modelos Ford e Chevrolet, imagens dos veículos e quantidade de manuais disponíveis."
+        }
+      ],
+      "release_date": "2026",
+      "project_type": "professional",
+      "presentation": "gallery",
+      "poster_path": "/midia/galerias/FactoryShop-01-inicio.png",
+      "backdrop_path": "/midia/galerias/FactoryShop-01-inicio.png",
+      "warning": ""
+    },
+    {
+      "id": 11,
+      "title": "TimeShift - Site institucional",
+      "overview": "Site oficial da agência Timeshift",
+      "release_date": "2025-04-20",
+      "vote_average": 8,
+      "link": "https://timeshift.com.br/",
+      "poster_path": "/midia/TimeshiftOficialCapa.png",
+      "backdrop_path": "/midia/TimeshiftOficialBanner.png",
+      "genres": [
+        "Front-end",
+        "Wordpress"
+      ],
+      "warning": "",
+      "project_type": "professional"
     }
   ],
   "aplicativos": [
@@ -158,6 +333,37 @@
         "Analytics"
       ],
       "warning": ""
+    },
+    {
+      "id": 19,
+      "title": "Ara English - Estudo de inglês",
+      "overview": "Aplicativo de estudo de inglês com lições de gramática, exercícios corrigidos e revisão espaçada. Organiza o aprendizado em 115 unidades baseadas nos tópicos de Essential Grammar in Use. Inclui um teste de nível para sugerir por onde começar e permite definir objetivos de aprendizagem e metas diárias de questões, apoiando uma rotina de prática progressiva.",
+      "release_date": "",
+      "link": "https://ara-english-server-delta.vercel.app/nivel",
+      "poster_path": "/midia/AraEnglish-2026-10-20.png",
+      "backdrop_path": "/midia/AraEnglish-2026-10-20.png",
+      "genres": [
+        "Educação",
+        "Inglês",
+        "Gramática"
+      ],
+      "warning": ""
+    },
+    {
+      "id": 20,
+      "title": "Atlas Harmônico - Acordes de piano",
+      "overview": "Biblioteca interativa de acordes para piano, com 708 voicings organizados por tonalidade, família e capítulo. Permite pesquisar por cifra, nota ou fórmula, visualizar a distribuição das notas entre as duas mãos e consultar graus, oitavas e nível de dificuldade. Inclui reprodução de acordes e arpejos, prática separada por mão e favoritos para organizar o estudo.",
+      "release_date": "",
+      "link": "https://palegreen-shark-460053.hostingersite.com/",
+      "poster_path": "/midia/AtlasHarmonico-arte-2026-10-20.png",
+      "backdrop_path": "/midia/AtlasHarmonico-arte-2026-10-20.png",
+      "genres": [
+        "Música",
+        "Piano",
+        "Educação"
+      ],
+      "warning": "",
+      "project_type": "professional"
     },
     {
       "id": 3,
@@ -237,7 +443,8 @@
         "Front-end",
         "Wordpress"
       ],
-      "warning": ""
+      "warning": "",
+      "project_type": "professional"
     },
     {
       "id": 13,
